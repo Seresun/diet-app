@@ -1,67 +1,62 @@
 [
   {
     "id": "gastritis",
-    "name": "Гастрит",
-    "allowedFoods": ["Овсянка", "Картофель", "Банан", "Отварное мясо", "Кисель", "Творог", "Яйца всмятку", "Овощные супы"],
-    "prohibitedFoods": ["Острое", "Кофе", "Алкоголь", "Жареное", "Кислые фрукты", "Газировка", "Копчёности"],
+    "allowedFoods": ["oatmeal", "potato", "banana", "boiled_meat", "jelly", "cottage_cheese", "soft_boiled_eggs", "vegetable_soup"],
+    "prohibitedFoods": ["spicy_foods", "coffee", "alcohol", "fried_foods", "sour_fruits", "soda", "smoked_foods"],
     "dailyPlan": [
-      { "time": "08:00", "meal": "Овсянка на воде, банан, некрепкий чай" },
-      { "time": "11:00", "meal": "Творог с мёдом" },
-      { "time": "13:00", "meal": "Картофельное пюре, отварная куриная грудка, овощной суп" },
-      { "time": "16:00", "meal": "Кисель, сухарики" },
-      { "time": "19:00", "meal": "Овощной суп, яйцо всмятку, компот" }
+      { "time": "08:00", "meal": "oatmeal_water_banana_weak_tea" },
+      { "time": "11:00", "meal": "cottage_cheese_honey" },
+      { "time": "13:00", "meal": "mashed_potatoes_boiled_chicken_vegetable_soup" },
+      { "time": "16:00", "meal": "jelly_rusks" },
+      { "time": "19:00", "meal": "vegetable_soup_soft_boiled_egg_compote" }
     ]
   },
   {
     "id": "diabetes",
-    "name": "Диабет",
-    "allowedFoods": ["Гречка", "Овощи", "Рыба", "Курица", "Яйца", "Творог", "Бобовые", "Цельнозерновой хлеб"],
-    "prohibitedFoods": ["Сахар", "Белый хлеб", "Сладости", "Газировка", "Картофель", "Белый рис", "Мёд"],
+    "allowedFoods": ["buckwheat", "vegetables", "fish", "chicken", "eggs", "cottage_cheese", "legumes", "whole_grain_bread"],
+    "prohibitedFoods": ["sugar", "white_bread", "sweets", "soda", "potato", "white_rice", "honey"],
     "dailyPlan": [
-      { "time": "08:00", "meal": "Омлет из 2 яиц, помидор, цельнозерновой хлеб" },
-      { "time": "11:00", "meal": "Творог с ягодами" },
-      { "time": "13:00", "meal": "Гречка, куриная грудка, тушёные овощи" },
-      { "time": "16:00", "meal": "Салат из овощей с оливковым маслом" },
-      { "time": "19:00", "meal": "Рыба на пару, овощной салат, кефир" }
+      { "time": "08:00", "meal": "omelet_tomato_whole_grain_bread" },
+      { "time": "11:00", "meal": "cottage_cheese_berries" },
+      { "time": "13:00", "meal": "buckwheat_chicken_vegetables" },
+      { "time": "16:00", "meal": "vegetable_salad_olive_oil" },
+      { "time": "19:00", "meal": "fish_vegetable_salad_kefir" }
     ]
   },
   {
     "id": "hypertension",
-    "name": "Гипертония",
-    "allowedFoods": ["Овощи", "Фрукты", "Рыба", "Курица", "Молочные продукты", "Орехи", "Бобовые"],
-    "prohibitedFoods": ["Соль", "Копчёности", "Консервы", "Алкоголь", "Кофе", "Жирное мясо"],
+    "allowedFoods": ["vegetables", "fruits", "fish", "chicken", "dairy_products", "nuts", "legumes"],
+    "prohibitedFoods": ["salt", "smoked_foods", "canned_foods", "alcohol", "coffee", "fatty_meat"],
     "dailyPlan": [
-      { "time": "08:00", "meal": "Овсянка с фруктами, йогурт, зелёный чай" },
-      { "time": "11:00", "meal": "Яблоко, горсть орехов" },
-      { "time": "13:00", "meal": "Овощной суп, куриная грудка, салат" },
-      { "time": "16:00", "meal": "Творог с ягодами" },
-      { "time": "19:00", "meal": "Рыба на пару, овощи, кефир" }
+      { "time": "08:00", "meal": "oatmeal_fruits_yogurt_green_tea" },
+      { "time": "11:00", "meal": "apple_nuts" },
+      { "time": "13:00", "meal": "vegetable_soup_chicken_salad" },
+      { "time": "16:00", "meal": "cottage_cheese_berries" },
+      { "time": "19:00", "meal": "fish_vegetables_kefir" }
     ]
   },
   {
     "id": "obesity",
-    "name": "Ожирение",
-    "allowedFoods": ["Овощи", "Фрукты", "Постное мясо", "Рыба", "Творог", "Яйца", "Бобовые"],
-    "prohibitedFoods": ["Сладости", "Жирное мясо", "Майонез", "Газировка", "Алкоголь", "Белый хлеб"],
+    "allowedFoods": ["vegetables", "fruits", "lean_meat", "fish", "cottage_cheese", "eggs", "legumes"],
+    "prohibitedFoods": ["sweets", "fatty_meat", "mayonnaise", "soda", "alcohol", "white_bread"],
     "dailyPlan": [
-      { "time": "08:00", "meal": "Овсянка с ягодами, яйцо всмятку" },
-      { "time": "11:00", "meal": "Яблоко или апельсин" },
-      { "time": "13:00", "meal": "Овощной суп, куриная грудка, салат" },
-      { "time": "16:00", "meal": "Творог с фруктами" },
-      { "time": "19:00", "meal": "Рыба на пару, овощи, кефир" }
+      { "time": "08:00", "meal": "oatmeal_berries_soft_boiled_egg" },
+      { "time": "11:00", "meal": "apple_orange" },
+      { "time": "13:00", "meal": "vegetable_soup_chicken_salad" },
+      { "time": "16:00", "meal": "cottage_cheese_fruits" },
+      { "time": "19:00", "meal": "fish_vegetables_kefir" }
     ]
   },
   {
     "id": "ulcer",
-    "name": "Язва желудка",
-    "allowedFoods": ["Овсянка", "Рис", "Картофель", "Отварное мясо", "Творог", "Яйца", "Кисель"],
-    "prohibitedFoods": ["Острое", "Кислое", "Жареное", "Кофе", "Алкоголь", "Газировка", "Копчёности"],
+    "allowedFoods": ["oatmeal", "white_rice", "potato", "boiled_meat", "cottage_cheese", "eggs", "jelly"],
+    "prohibitedFoods": ["spicy_foods", "sour_foods", "fried_foods", "coffee", "alcohol", "soda", "smoked_foods"],
     "dailyPlan": [
-      { "time": "08:00", "meal": "Овсянка на воде, яйцо всмятку, некрепкий чай" },
-      { "time": "11:00", "meal": "Творог с мёдом" },
-      { "time": "13:00", "meal": "Рисовый суп, отварная курица, картофельное пюре" },
-      { "time": "16:00", "meal": "Кисель, сухарики" },
-      { "time": "19:00", "meal": "Овощной суп-пюре, творог, компот" }
+      { "time": "08:00", "meal": "oatmeal_water_soft_boiled_egg_weak_tea" },
+      { "time": "11:00", "meal": "cottage_cheese_honey" },
+      { "time": "13:00", "meal": "rice_soup_boiled_chicken_mashed_potatoes" },
+      { "time": "16:00", "meal": "jelly_rusks" },
+      { "time": "19:00", "meal": "vegetable_puree_soup_cottage_cheese_compote" }
     ]
   }
 ]

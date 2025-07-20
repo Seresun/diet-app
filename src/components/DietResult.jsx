@@ -11,14 +11,14 @@ function DietResult({ data }) {
       <h3 className="section-title">{t('allowedFoods')}</h3>
       <ul className="food-list">
         {data.allowedFoods.map((item, index) => (
-          <li key={index}>{item}</li>
+          <li key={index}>{t(`products.${item}`)}</li>
         ))}
       </ul>
 
       <h3 className="section-title">{t('prohibitedFoods')}</h3>
       <ul className="food-list prohibited-list">
         {data.prohibitedFoods.map((item, index) => (
-          <li key={index}>{item}</li>
+          <li key={index}>{t(`products.${item}`)}</li>
         ))}
       </ul>
 
@@ -26,7 +26,7 @@ function DietResult({ data }) {
       <ul className="food-list meal-plan">
         {data.dailyPlan.map((entry, index) => (
           <li key={index}>
-            <span className="meal-time">{entry.time}</span>: {entry.meal}
+            <span className="meal-time">{entry.time}</span>: {t(`products.meals.${entry.meal}`)}
           </li>
         ))}
       </ul>
