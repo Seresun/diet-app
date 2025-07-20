@@ -1,0 +1,18 @@
+{
+  "title": "Diet by Diagnosis",
+  "selectDiagnosis": "Select diagnosis:",
+  "selectPlaceholder": "-- select diagnosis --",
+  "showRecommendations": "Show Recommendations",
+  "recommendationsFor": "Recommendations for:",
+  "allowedFoods": "✅ Allowed Foods:",
+  "prohibitedFoods": "❌ Prohibited Foods:",
+  "dailyMenu": "🍽️ Daily Menu Example:",
+  "pleaseSelectDiagnosis": "Please select a diagnosis",
+  "diagnoses": {
+    "gastritis": "Gastritis",
+    "diabetes": "Diabetes",
+    "hypertension": "Hypertension",
+    "obesity": "Obesity",
+    "ulcer": "Stomach Ulcer"
+  }
+} 

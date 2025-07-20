@@ -186,6 +186,31 @@
   text-align: center;
 }
 
+.language-switcher {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 0.9rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.language-switcher:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(102, 126, 234, 0.3);
+}
+
+.app-container {
+  position: relative;
+}
+
 @media (max-width: 768px) {
   #root {
     padding: 1rem;
@@ -198,5 +223,12 @@
   
   .app-title {
     font-size: 2rem;
+  }
+  
+  .language-switcher {
+    top: 0.5rem;
+    right: 0.5rem;
+    padding: 6px 12px;
+    font-size: 0.8rem;
   }
 }

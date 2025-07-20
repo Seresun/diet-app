@@ -1,10 +1,13 @@
 import React, { useState } from 'react';
+import { useTranslation } from 'react-i18next';
 import DietForm from './components/DietForm';
 import DietResult from './components/DietResult';
+import LanguageSwitcher from './components/LanguageSwitcher';
 import diagnoses from './data/diagnoses.json';
 import './App.css';
 
 function App() {
+  const { t } = useTranslation();
   const [selectedDiagnosis, setSelectedDiagnosis] = useState(null);
 
   const handleSubmit = (diagnosisId) => {
@@ -14,7 +17,8 @@ function App() {
 
   return (
     <div className="app-container">
-      <h1 className="app-title">Диета по диагнозу</h1>
+      <LanguageSwitcher />
+      <h1 className="app-title">{t('title')}</h1>
       <DietForm diagnoses={diagnoses} onSubmit={handleSubmit} />
       {selectedDiagnosis && <DietResult data={selectedDiagnosis} />}
     </div>

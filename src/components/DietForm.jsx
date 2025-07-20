@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
+import { useTranslation } from 'react-i18next';
 
 function DietForm({ diagnoses, onSubmit }) {
+  const { t } = useTranslation();
   const [diagnosisId, setDiagnosisId] = useState('');
   const [error, setError] = useState('');
 
@@ -9,7 +11,7 @@ function DietForm({ diagnoses, onSubmit }) {
     setError('');
     
     if (!diagnosisId) {
-      setError('Пожалуйста, выберите диагноз');
+      setError(t('pleaseSelectDiagnosis'));
       return;
     }
     
@@ -21,7 +23,7 @@ function DietForm({ diagnoses, onSubmit }) {
       <form onSubmit={handleSubmit}>
         <div className="form-group">
           <label className="form-label">
-            Выберите диагноз:
+            {t('selectDiagnosis')}
           </label>
           <select 
             className="form-select"
@@ -29,9 +31,9 @@ function DietForm({ diagnoses, onSubmit }) {
             onChange={(e) => setDiagnosisId(e.target.value)}
             required
           >
-            <option value="" disabled>-- выберите диагноз --</option>
+            <option value="" disabled>{t('selectPlaceholder')}</option>
             {diagnoses.map(d => (
-              <option key={d.id} value={d.id}>{d.name}</option>
+              <option key={d.id} value={d.id}>{t(`diagnoses.${d.id}`)}</option>
             ))}
           </select>
         </div>
@@ -43,7 +45,7 @@ function DietForm({ diagnoses, onSubmit }) {
           className="submit-button"
           disabled={!diagnosisId}
         >
-          Показать рекомендации
+          {t('showRecommendations')}
         </button>
       </form>
     </div>
