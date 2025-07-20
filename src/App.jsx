@@ -3,6 +3,7 @@ import { useTranslation } from 'react-i18next';
 import DietForm from './components/DietForm';
 import DietResult from './components/DietResult';
 import LanguageSwitcher from './components/LanguageSwitcher';
+import CustomDiagnosisGPT from './components/CustomDiagnosisGPT';
 import diagnoses from './data/diagnoses.json';
 import './App.css';
 
@@ -21,6 +22,7 @@ function App() {
       <h1 className="app-title">{t('title')}</h1>
       <DietForm diagnoses={diagnoses} onSubmit={handleSubmit} />
       {selectedDiagnosis && <DietResult data={selectedDiagnosis} />}
+      <CustomDiagnosisGPT />
     </div>
   );
 }
