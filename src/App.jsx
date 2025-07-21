@@ -7,6 +7,7 @@ import LanguageSwitcher from './components/LanguageSwitcher';
 import CustomDiagnosisGPT from './components/CustomDiagnosisGPT';
 import diagnoses from './data/diagnoses.json';
 import './App.css';
+import About from './pages/About';
 
 function intersect(arrays) {
   if (arrays.length === 0) return [];
@@ -34,6 +35,9 @@ function MainPage({ resultData, selectedDiagnoses, handleDiagnosesChange, handle
       <div style={{ marginTop: 24 }}>
         <Link to="/custom">{t('cantFindDiagnosis')}</Link>
       </div>
+      <footer style={{ marginTop: 40, textAlign: 'center' }}>
+        <Link to="/about">О проекте</Link>
+      </footer>
     </>
   );
 }
@@ -113,6 +117,7 @@ function App() {
             <Link to="/">← {t('backToMain')}</Link>
             <CustomDiagnosisGPT />
           </>} />
+          <Route path="/about" element={<About />} />
         </Routes>
       </div>
     </BrowserRouter>
