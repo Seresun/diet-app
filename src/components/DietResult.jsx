@@ -3,10 +3,21 @@ import { useTranslation } from 'react-i18next';
 
 function DietResult({ data }) {
   const { t } = useTranslation();
-  
+
+  if (data.tooFewAllowed) {
+    return (
+      <div className="diet-result">
+        <h2 className="result-title">⚠️ {t('recommendationsFor')} {data.selectedIds.map(id => t(`diagnoses.${id}`)).join(', ')}</h2>
+        <div className="error-message">
+          {t('tooFewAllowedWarning')}
+        </div>
+      </div>
+    );
+  }
+
   return (
     <div className="diet-result">
-      <h2 className="result-title">{t('recommendationsFor')} {t(`diagnoses.${data.id}`)}</h2>
+      <h2 className="result-title">{t('recommendationsFor')} {data.selectedIds.map(id => t(`diagnoses.${id}`)).join(', ')}</h2>
 
       <h3 className="section-title">{t('allowedFoods')}</h3>
       <ul className="food-list">
@@ -26,7 +37,7 @@ function DietResult({ data }) {
       <ul className="food-list meal-plan">
         {data.dailyPlan.map((entry, index) => (
           <li key={index}>
-            <span className="meal-time">{entry.time}</span>: {t(`products.meals.${entry.meal}`)}
+            <span className="meal-time">{entry.time}</span>: {t(`products.meals.${entry.meal}`) || entry.meal}
           </li>
         ))}
       </ul>

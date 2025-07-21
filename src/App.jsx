@@ -1,5 +1,6 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
+import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
 import DietForm from './components/DietForm';
 import DietResult from './components/DietResult';
 import LanguageSwitcher from './components/LanguageSwitcher';
@@ -7,23 +8,114 @@ import CustomDiagnosisGPT from './components/CustomDiagnosisGPT';
 import diagnoses from './data/diagnoses.json';
 import './App.css';
 
+function intersect(arrays) {
+  if (arrays.length === 0) return [];
+  return arrays.reduce((a, b) => a.filter(x => b.includes(x)));
+}
+
+function union(arrays) {
+  return Array.from(new Set(arrays.flat()));
+}
+
+const LOCAL_STORAGE_KEY = 'selectedDiagnoses';
+
+function MainPage({ resultData, selectedDiagnoses, handleDiagnosesChange, handleSubmit }) {
+  const { t } = useTranslation();
+  return (
+    <>
+      <h1 className="app-title">{t('title')}</h1>
+      <DietForm 
+        diagnoses={diagnoses} 
+        onSubmit={handleSubmit} 
+        value={selectedDiagnoses}
+        onChange={handleDiagnosesChange}
+      />
+      {resultData && <DietResult data={resultData} />}
+      <div style={{ marginTop: 24 }}>
+        <Link to="/custom">{t('cantFindDiagnosis')}</Link>
+      </div>
+    </>
+  );
+}
+
 function App() {
   const { t } = useTranslation();
-  const [selectedDiagnosis, setSelectedDiagnosis] = useState(null);
+  const [resultData, setResultData] = useState(null);
+  const [selectedDiagnoses, setSelectedDiagnoses] = useState([]);
 
-  const handleSubmit = (diagnosisId) => {
-    const diagnosis = diagnoses.find(d => d.id === diagnosisId);
-    setSelectedDiagnosis(diagnosis);
+  useEffect(() => {
+    const saved = localStorage.getItem(LOCAL_STORAGE_KEY);
+    if (saved) {
+      try {
+        const parsed = JSON.parse(saved);
+        if (Array.isArray(parsed)) {
+          setSelectedDiagnoses(parsed);
+          handleSubmit(parsed);
+        }
+      } catch { /* ignore */ }
+    }
+  }, []);
+
+  useEffect(() => {
+    localStorage.setItem(LOCAL_STORAGE_KEY, JSON.stringify(selectedDiagnoses));
+  }, [selectedDiagnoses]);
+
+  const handleDiagnosesChange = (ids) => {
+    setSelectedDiagnoses(ids);
+  };
+
+  const handleSubmit = (diagnosisIds) => {
+    setSelectedDiagnoses(diagnosisIds);
+    const selected = diagnoses.filter(d => diagnosisIds.includes(d.id));
+    if (selected.length === 0) {
+      setResultData(null);
+      return;
+    }
+    const allowedFoods = intersect(selected.map(d => d.allowedFoods));
+    const prohibitedFoods = union(selected.map(d => d.prohibitedFoods));
+    const allPlans = selected.map(d => d.dailyPlan).flat();
+    const filteredPlan = allPlans.filter(entry => {
+      const mealName = entry.meal;
+      for (const prod of prohibitedFoods) {
+        if (mealName.includes(prod)) return false;
+      }
+      if (allowedFoods.length > 0) {
+        const hasAllowed = allowedFoods.some(prod => mealName.includes(prod));
+        if (!hasAllowed) return false;
+      }
+      return true;
+    });
+    const tooFewAllowed = allowedFoods.length === 0 || filteredPlan.length === 0;
+    setResultData({
+      allowedFoods,
+      prohibitedFoods,
+      dailyPlan: filteredPlan,
+      tooFewAllowed,
+      selectedIds: diagnosisIds
+    });
   };
 
   return (
-    <div className="app-container">
-      <LanguageSwitcher />
-      <h1 className="app-title">{t('title')}</h1>
-      <DietForm diagnoses={diagnoses} onSubmit={handleSubmit} />
-      {selectedDiagnosis && <DietResult data={selectedDiagnosis} />}
-      <CustomDiagnosisGPT />
-    </div>
+    <BrowserRouter>
+      <div className="app-container">
+        <LanguageSwitcher />
+        <Routes>
+          <Route path="/" element={
+            <MainPage 
+              resultData={resultData}
+              selectedDiagnoses={selectedDiagnoses}
+              handleDiagnosesChange={handleDiagnosesChange}
+              handleSubmit={handleSubmit}
+            />
+          } />
+          <Route path="/custom" element={<>
+            <h1 className="app-title">{t('title')}</h1>
+            <Link to="/">← {t('backToMain')}</Link>
+            <CustomDiagnosisGPT />
+          </>} />
+        </Routes>
+      </div>
+    </BrowserRouter>
   );
 }
 

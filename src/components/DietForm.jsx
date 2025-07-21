@@ -1,21 +1,36 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 
-function DietForm({ diagnoses, onSubmit }) {
+function DietForm({ diagnoses, onSubmit, value = [], onChange }) {
   const { t } = useTranslation();
-  const [diagnosisId, setDiagnosisId] = useState('');
+  const [selectedDiagnoses, setSelectedDiagnoses] = useState(value);
   const [error, setError] = useState('');
+
+  // Синхронизация с внешним value
+  useEffect(() => {
+    setSelectedDiagnoses(value);
+  }, [value]);
+
+  const handleCheckboxChange = (e) => {
+    const { value, checked } = e.target;
+    let updated;
+    if (checked) {
+      updated = [...selectedDiagnoses, value];
+    } else {
+      updated = selectedDiagnoses.filter((id) => id !== value);
+    }
+    setSelectedDiagnoses(updated);
+    if (onChange) onChange(updated);
+  };
 
   const handleSubmit = (e) => {
     e.preventDefault();
     setError('');
-    
-    if (!diagnosisId) {
+    if (selectedDiagnoses.length === 0) {
       setError(t('pleaseSelectDiagnosis'));
       return;
     }
-    
-    onSubmit(diagnosisId);
+    onSubmit(selectedDiagnoses);
   };
 
   return (
@@ -25,25 +40,25 @@ function DietForm({ diagnoses, onSubmit }) {
           <label className="form-label">
             {t('selectDiagnosis')}
           </label>
-          <select 
-            className="form-select"
-            value={diagnosisId} 
-            onChange={(e) => setDiagnosisId(e.target.value)}
-            required
-          >
-            <option value="" disabled>{t('selectPlaceholder')}</option>
+          <div className="checkbox-group">
             {diagnoses.map(d => (
-              <option key={d.id} value={d.id}>{t(`diagnoses.${d.id}`)}</option>
+              <label key={d.id} className="checkbox-label">
+                <input
+                  type="checkbox"
+                  value={d.id}
+                  checked={selectedDiagnoses.includes(d.id)}
+                  onChange={handleCheckboxChange}
+                />
+                {t(`diagnoses.${d.id}`)}
+              </label>
             ))}
-          </select>
+          </div>
         </div>
-        
         {error && <div className="error-message">{error}</div>}
-        
         <button 
           type="submit" 
           className="submit-button"
-          disabled={!diagnosisId}
+          disabled={selectedDiagnoses.length === 0}
         >
           {t('showRecommendations')}
         </button>

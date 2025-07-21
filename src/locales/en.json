@@ -8,6 +8,9 @@
   "prohibitedFoods": "❌ Prohibited Foods:",
   "dailyMenu": "🍽️ Daily Menu Example:",
   "pleaseSelectDiagnosis": "Please select a diagnosis",
+  "tooFewAllowedWarning": "⚠️ The list of allowed foods for the selected diagnoses is too small to create a balanced menu. Try removing one of the diagnoses or consult a doctor for an individual diet plan.",
+  "cantFindDiagnosis": "Can't find your diagnosis?",
+  "backToMain": "Back to diagnosis selection",
   "diagnoses": {
     "gastritis": "Gastritis",
     "diabetes": "Diabetes",
