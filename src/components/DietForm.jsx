@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
+import Autocomplete from '@mui/material/Autocomplete';
+import TextField from '@mui/material/TextField';
 
 function DietForm({ diagnoses, onSubmit, value = [], onChange }) {
   const { t } = useTranslation();
@@ -11,16 +13,9 @@ function DietForm({ diagnoses, onSubmit, value = [], onChange }) {
     setSelectedDiagnoses(value);
   }, [value]);
 
-  const handleCheckboxChange = (e) => {
-    const { value, checked } = e.target;
-    let updated;
-    if (checked) {
-      updated = [...selectedDiagnoses, value];
-    } else {
-      updated = selectedDiagnoses.filter((id) => id !== value);
-    }
-    setSelectedDiagnoses(updated);
-    if (onChange) onChange(updated);
+  const handleChange = (event, newValue) => {
+    setSelectedDiagnoses(newValue);
+    if (onChange) onChange(newValue);
   };
 
   const handleSubmit = (e) => {
@@ -40,19 +35,20 @@ function DietForm({ diagnoses, onSubmit, value = [], onChange }) {
           <label className="form-label">
             {t('selectDiagnosis')}
           </label>
-          <div className="checkbox-group">
-            {diagnoses.map(d => (
-              <label key={d.id} className="checkbox-label">
-                <input
-                  type="checkbox"
-                  value={d.id}
-                  checked={selectedDiagnoses.includes(d.id)}
-                  onChange={handleCheckboxChange}
-                />
-                {t(`diagnoses.${d.id}`)}
-              </label>
-            ))}
-          </div>
+          <Autocomplete
+            multiple
+            id="diagnosis-autocomplete"
+            options={diagnoses.map(d => d.id)}
+            value={selectedDiagnoses}
+            onChange={handleChange}
+            getOptionLabel={(id) => t(`diagnoses.${id}`)}
+            renderInput={(params) => (
+              <TextField {...params} label={t('selectDiagnosis')} placeholder={t('selectPlaceholder')} />
+            )}
+            fullWidth
+            disableCloseOnSelect
+            sx={{ marginBottom: 2 }}
+          />
         </div>
         {error && <div className="error-message">{error}</div>}
         <button 
