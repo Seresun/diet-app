@@ -37,7 +37,7 @@ function DietResult({ data }) {
       <ul className="food-list meal-plan">
         {data.dailyPlan.map((entry, index) => (
           <li key={index}>
-            <span className="meal-time">{entry.time}</span>: {t(`products.meals.${entry.meal}`) || entry.meal}
+            <span className="meal-time">{entry.time}</span>: {t(`products.meals.${entry.mealKey}`) || entry.mealKey}
           </li>
         ))}
       </ul>

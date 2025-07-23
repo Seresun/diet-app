@@ -79,12 +79,12 @@ function App() {
     const prohibitedFoods = union(selected.map(d => d.prohibitedFoods));
     const allPlans = selected.map(d => d.dailyPlan).flat();
     const filteredPlan = allPlans.filter(entry => {
-      const mealName = entry.meal;
-      for (const prod of prohibitedFoods) {
-        if (mealName.includes(prod)) return false;
-      }
+      // entry.ingredients is now an array of ingredients
+      // Исключаем блюда с запрещёнными продуктами
+      if (prohibitedFoods.some(prod => entry.ingredients.includes(prod))) return false;
+      // Оставляем блюда, где есть хотя бы один разрешённый продукт
       if (allowedFoods.length > 0) {
-        const hasAllowed = allowedFoods.some(prod => mealName.includes(prod));
+        const hasAllowed = allowedFoods.some(prod => entry.ingredients.includes(prod));
         if (!hasAllowed) return false;
       }
       return true;

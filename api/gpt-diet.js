@@ -16,7 +16,7 @@ export default async function handler(req, res) {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
-        Authorization: `Bearer ${process.env.OPENAI_API_KEY}`
+        Authorization: `Bearer ${import.meta.env.VITE_OPENAI_API_KEY}`
       },
       body: JSON.stringify({
         model: 'gpt-3.5-turbo',
@@ -29,7 +29,7 @@ export default async function handler(req, res) {
       return res.status(500).json({ error: data.error?.message || 'OpenAI API error' });
     }
     res.status(200).json({ response: data.choices?.[0]?.message?.content || 'No reply' });
-  } catch (err) {
+  } catch {
     res.status(500).json({ error: 'Server error' });
   }
 } 

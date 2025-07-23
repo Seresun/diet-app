@@ -43,7 +43,7 @@ function DietForm({ diagnoses, onSubmit, value = [], onChange }) {
             onChange={handleChange}
             getOptionLabel={(id) => t(`diagnoses.${id}`)}
             renderInput={(params) => (
-              <TextField {...params} label={t('selectDiagnosis')} placeholder={t('selectPlaceholder')} />
+              <TextField {...params} placeholder={t('selectPlaceholder')} />
             )}
             fullWidth
             disableCloseOnSelect

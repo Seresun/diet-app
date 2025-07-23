@@ -4,23 +4,11 @@
     "allowedFoods": ["oatmeal", "potato", "banana", "boiled_meat", "jelly", "cottage_cheese", "soft_boiled_eggs", "vegetable_soup"],
     "prohibitedFoods": ["spicy_foods", "coffee", "alcohol", "fried_foods", "sour_fruits", "soda", "smoked_foods"],
     "dailyPlan": [
-      { "time": "08:00", "meal": "oatmeal_water_banana_weak_tea" },
-      { "time": "11:00", "meal": "cottage_cheese_honey" },
-      { "time": "13:00", "meal": "mashed_potatoes_boiled_chicken_vegetable_soup" },
-      { "time": "16:00", "meal": "jelly_rusks" },
-      { "time": "19:00", "meal": "vegetable_soup_soft_boiled_egg_compote" }
-    ]
-  },
-  {
-    "id": "diabetes",
-    "allowedFoods": ["buckwheat", "vegetables", "fish", "chicken", "eggs", "cottage_cheese", "legumes", "whole_grain_bread"],
-    "prohibitedFoods": ["sugar", "white_bread", "sweets", "soda", "potato", "white_rice", "honey"],
-    "dailyPlan": [
-      { "time": "08:00", "meal": "omelet_tomato_whole_grain_bread" },
-      { "time": "11:00", "meal": "cottage_cheese_berries" },
-      { "time": "13:00", "meal": "buckwheat_chicken_vegetables" },
-      { "time": "16:00", "meal": "vegetable_salad_olive_oil" },
-      { "time": "19:00", "meal": "fish_vegetable_salad_kefir" }
+      { "time": "08:00", "mealKey": "oatmeal_water_banana_weak_tea", "ingredients": ["oatmeal", "banana", "weak_tea"] },
+      { "time": "11:00", "mealKey": "cottage_cheese_honey", "ingredients": ["cottage_cheese", "honey"] },
+      { "time": "13:00", "mealKey": "mashed_potatoes_boiled_chicken_vegetable_soup", "ingredients": ["potato", "chicken", "vegetable_soup"] },
+      { "time": "16:00", "mealKey": "jelly_rusks", "ingredients": ["jelly", "rusks"] },
+      { "time": "19:00", "mealKey": "vegetable_soup_soft_boiled_egg_compote", "ingredients": ["vegetable_soup", "eggs", "compote"] }
     ]
   },
   {
@@ -28,11 +16,11 @@
     "allowedFoods": ["vegetables", "fruits", "fish", "chicken", "dairy_products", "nuts", "legumes"],
     "prohibitedFoods": ["salt", "smoked_foods", "canned_foods", "alcohol", "coffee", "fatty_meat"],
     "dailyPlan": [
-      { "time": "08:00", "meal": "oatmeal_fruits_yogurt_green_tea" },
-      { "time": "11:00", "meal": "apple_nuts" },
-      { "time": "13:00", "meal": "vegetable_soup_chicken_salad" },
-      { "time": "16:00", "meal": "cottage_cheese_berries" },
-      { "time": "19:00", "meal": "fish_vegetables_kefir" }
+      { "time": "08:00", "mealKey": "oatmeal_fruits_yogurt_green_tea", "ingredients": ["oatmeal", "fruits", "yogurt", "green_tea"] },
+      { "time": "11:00", "mealKey": "apple_nuts", "ingredients": ["apple", "nuts"] },
+      { "time": "13:00", "mealKey": "vegetable_soup_chicken_salad", "ingredients": ["vegetable_soup", "chicken", "vegetables"] },
+      { "time": "16:00", "mealKey": "cottage_cheese_berries", "ingredients": ["cottage_cheese", "berries"] },
+      { "time": "19:00", "mealKey": "fish_vegetables_kefir", "ingredients": ["fish", "vegetables", "kefir"] }
     ]
   },
   {
@@ -40,11 +28,11 @@
     "allowedFoods": ["vegetables", "fruits", "lean_meat", "fish", "cottage_cheese", "eggs", "legumes"],
     "prohibitedFoods": ["sweets", "fatty_meat", "mayonnaise", "soda", "alcohol", "white_bread"],
     "dailyPlan": [
-      { "time": "08:00", "meal": "oatmeal_berries_soft_boiled_egg" },
-      { "time": "11:00", "meal": "apple_orange" },
-      { "time": "13:00", "meal": "vegetable_soup_chicken_salad" },
-      { "time": "16:00", "meal": "cottage_cheese_fruits" },
-      { "time": "19:00", "meal": "fish_vegetables_kefir" }
+      { "time": "08:00", "mealKey": "oatmeal_berries_soft_boiled_egg", "ingredients": ["oatmeal", "berries", "eggs"] },
+      { "time": "11:00", "mealKey": "apple_orange", "ingredients": ["apple", "orange"] },
+      { "time": "13:00", "mealKey": "vegetable_soup_chicken_salad", "ingredients": ["vegetable_soup", "chicken", "vegetables"] },
+      { "time": "16:00", "mealKey": "cottage_cheese_fruits", "ingredients": ["cottage_cheese", "fruits"] },
+      { "time": "19:00", "mealKey": "fish_vegetables_kefir", "ingredients": ["fish", "vegetables", "kefir"] }
     ]
   },
   {
@@ -52,11 +40,121 @@
     "allowedFoods": ["oatmeal", "white_rice", "potato", "boiled_meat", "cottage_cheese", "eggs", "jelly"],
     "prohibitedFoods": ["spicy_foods", "sour_foods", "fried_foods", "coffee", "alcohol", "soda", "smoked_foods"],
     "dailyPlan": [
-      { "time": "08:00", "meal": "oatmeal_water_soft_boiled_egg_weak_tea" },
-      { "time": "11:00", "meal": "cottage_cheese_honey" },
-      { "time": "13:00", "meal": "rice_soup_boiled_chicken_mashed_potatoes" },
-      { "time": "16:00", "meal": "jelly_rusks" },
-      { "time": "19:00", "meal": "vegetable_puree_soup_cottage_cheese_compote" }
+      { "time": "08:00", "mealKey": "oatmeal_water_soft_boiled_egg_weak_tea", "ingredients": ["oatmeal", "eggs", "weak_tea"] },
+      { "time": "11:00", "mealKey": "cottage_cheese_honey", "ingredients": ["cottage_cheese", "honey"] },
+      { "time": "13:00", "mealKey": "rice_soup_boiled_chicken_mashed_potatoes", "ingredients": ["rice_soup", "chicken", "potato"] },
+      { "time": "16:00", "mealKey": "jelly_rusks", "ingredients": ["jelly", "rusks"] },
+      { "time": "19:00", "mealKey": "vegetable_puree_soup_cottage_cheese_compote", "ingredients": ["vegetable_puree_soup", "cottage_cheese", "compote"] }
+    ]
+  },
+  {
+    "id": "gout",
+    "allowedFoods": ["vegetables_except_sorrel_spinach", "fruits", "berries", "low_fat_dairy", "buckwheat", "oatmeal", "nuts", "eggs", "alkaline_water"],
+    "prohibitedFoods": ["red_meat", "offal", "meat_broth", "fatty_fish", "canned_fish", "legumes", "alcohol", "coffee", "strong_tea"],
+    "dailyPlan": [
+      { "time": "10:00", "mealKey": "oatmeal_water_banana", "ingredients": ["oatmeal", "banana"] },
+      { "time": "13:00", "mealKey": "buckwheat_steamed_zucchini_boiled_egg", "ingredients": ["buckwheat", "zucchini", "eggs"] },
+      { "time": "16:00", "mealKey": "cottage_cheese_apple", "ingredients": ["cottage_cheese", "apple"] },
+      { "time": "19:00", "mealKey": "pumpkin_puree_low_fat_kefir", "ingredients": ["pumpkin", "kefir"] }
+    ]
+  },
+  {
+    "id": "rheumatoid_arthritis",
+    "allowedFoods": ["fatty_fish", "vegetables", "fruits", "greens_except_spinach", "cereals", "nuts", "lean_meat"],
+    "prohibitedFoods": ["fatty_meat", "fried", "marinated", "white_bread", "sugar", "high_fat_dairy", "trans_fats"],
+    "dailyPlan": [
+      { "time": "09:00", "mealKey": "whole_grain_toast_avocado", "ingredients": ["whole_grain_bread", "avocado"] },
+      { "time": "12:00", "mealKey": "barley_baked_salmon_broccoli", "ingredients": ["barley", "salmon", "broccoli"] },
+      { "time": "15:00", "mealKey": "apple_walnuts", "ingredients": ["apple", "nuts"] },
+      { "time": "19:00", "mealKey": "quinoa_salad_arugula_kefir", "ingredients": ["quinoa", "arugula", "kefir"] }
+    ]
+  },
+  {
+    "id": "diabetes_type1",
+    "allowedFoods": ["non_starchy_vegetables", "whole_grains", "lean_protein", "fish", "poultry", "eggs", "sugar_free_dairy", "nuts", "seeds"],
+    "prohibitedFoods": ["sugar", "sweets", "fruit_juices", "white_bread", "pastries", "soda", "fatty_foods", "fried"],
+    "dailyPlan": [
+      { "time": "08:00", "mealKey": "omelet_broccoli", "ingredients": ["eggs", "broccoli"] },
+      { "time": "12:00", "mealKey": "chicken_breast_quinoa_cucumber_salad", "ingredients": ["chicken", "quinoa", "cucumber", "vegetables"] },
+      { "time": "16:00", "mealKey": "plain_yogurt", "ingredients": ["yogurt"] },
+      { "time": "19:00", "mealKey": "fish_zucchini_kefir", "ingredients": ["fish", "zucchini", "kefir"] }
+    ]
+  },
+  {
+    "id": "diabetes_type2",
+    "allowedFoods": ["vegetables", "lean_meat", "fish", "legumes", "lentils", "whole_grains", "nuts", "seeds"],
+    "prohibitedFoods": ["fast_carbs", "sweet_drinks", "alcohol", "pastries", "fast_food"],
+    "dailyPlan": [
+      { "time": "08:00", "mealKey": "cottage_cheese_cinnamon_apple", "ingredients": ["cottage_cheese", "cinnamon", "apple"] },
+      { "time": "12:00", "mealKey": "barley_stewed_turkey_cabbage", "ingredients": ["barley", "turkey", "cabbage"] },
+      { "time": "16:00", "mealKey": "cucumber_nuts", "ingredients": ["cucumber", "nuts"] },
+      { "time": "19:00", "mealKey": "steamed_fish_salad_kefir", "ingredients": ["fish", "vegetables", "kefir"] }
+    ]
+  },
+  {
+    "id": "atherosclerosis",
+    "allowedFoods": ["lean_fish", "white_meat", "vegetables", "fruits", "nuts", "olive_oil", "whole_grains", "garlic", "green_tea"],
+    "prohibitedFoods": ["fatty_meat", "sausages", "fried", "mayonnaise", "butter", "egg_yolk_excess"],
+    "dailyPlan": [
+      { "time": "08:00", "mealKey": "oatmeal_berries", "ingredients": ["oatmeal", "berries"] },
+      { "time": "12:00", "mealKey": "couscous_chicken_breast_stewed_vegetables", "ingredients": ["couscous", "chicken", "vegetables"] },
+      { "time": "16:00", "mealKey": "yogurt_apple", "ingredients": ["yogurt", "apple"] },
+      { "time": "19:00", "mealKey": "salmon_broccoli_green_tea", "ingredients": ["salmon", "broccoli", "green_tea"] }
+    ]
+  },
+  {
+    "id": "heart_failure",
+    "allowedFoods": ["potassium_rich_vegetables_fruits", "lean_meat", "fish", "low_fat_dairy", "oatmeal", "buckwheat", "sodium_free_mineral_water"],
+    "prohibitedFoods": ["salt_limit", "fatty_foods", "fried", "canned_foods", "caffeine", "alcohol"],
+    "dailyPlan": [
+      { "time": "08:00", "mealKey": "pumpkin_oatmeal", "ingredients": ["pumpkin", "oatmeal"] },
+      { "time": "12:00", "mealKey": "stewed_turkey_potato_carrot", "ingredients": ["turkey", "potato", "carrot"] },
+      { "time": "16:00", "mealKey": "banana", "ingredients": ["banana"] },
+      { "time": "19:00", "mealKey": "steamed_fish_cauliflower_kefir", "ingredients": ["fish", "cauliflower", "kefir"] }
+    ]
+  },
+  {
+    "id": "migraine",
+    "allowedFoods": ["cereals", "vegetables", "plain_dairy", "lean_meat", "almonds", "magnesium_rich_foods", "ginger", "mint"],
+    "prohibitedFoods": ["chocolate", "coffee", "alcohol", "citrus", "red_wine", "blue_cheese", "msg"],
+    "dailyPlan": [
+      { "time": "08:00", "mealKey": "buckwheat_mint", "ingredients": ["buckwheat", "mint"] },
+      { "time": "12:00", "mealKey": "stewed_vegetables_chicken_breast", "ingredients": ["vegetables", "chicken"] },
+      { "time": "16:00", "mealKey": "yogurt_almonds", "ingredients": ["yogurt", "almonds"] },
+      { "time": "19:00", "mealKey": "rice_fish_green_tea", "ingredients": ["rice", "fish", "green_tea"] }
+    ]
+  },
+  {
+    "id": "endometriosis",
+    "allowedFoods": ["vegetables_broccoli_cabbage_carrot_pumpkin", "non_citrus_fruits", "fish_salmon_mackerel", "nuts", "flax_olive_oil", "whole_grains", "legumes_moderate", "turmeric", "ginger"],
+    "prohibitedFoods": ["cow_milk", "high_fat_dairy", "soy", "fried", "fast_food", "red_meat_processed", "sugar", "sweets", "caffeine", "alcohol"],
+    "dailyPlan": [
+      { "time": "09:00", "mealKey": "quinoa_berries_mint_tea", "ingredients": ["quinoa", "berries", "mint_tea"] },
+      { "time": "13:00", "mealKey": "buckwheat_baked_salmon_stewed_broccoli", "ingredients": ["buckwheat", "salmon", "broccoli"] },
+      { "time": "16:00", "mealKey": "apple_walnuts", "ingredients": ["apple", "nuts"] },
+      { "time": "19:00", "mealKey": "vegetable_puree_soup_flax_oil_chamomile_tea", "ingredients": ["vegetable_puree_soup", "flax_oil", "chamomile_tea"] }
+    ]
+  },
+  {
+    "id": "pms",
+    "allowedFoods": ["magnesium_rich_foods", "vitamin_b6_foods", "fruits_vegetables", "low_fat_dairy", "sea_fish", "ginger", "cinnamon"],
+    "prohibitedFoods": ["caffeine", "sugar", "fast_carbs", "salt", "fatty_foods", "fried", "alcohol"],
+    "dailyPlan": [
+      { "time": "08:30", "mealKey": "oatmeal_banana_cinnamon", "ingredients": ["oatmeal", "banana", "cinnamon"] },
+      { "time": "12:30", "mealKey": "baked_chicken_breast_potato_salad", "ingredients": ["chicken", "potato", "salad"] },
+      { "time": "15:30", "mealKey": "almonds_orange", "ingredients": ["almonds", "orange"] },
+      { "time": "19:00", "mealKey": "steamed_fish_pumpkin_puree_chamomile_tea", "ingredients": ["fish", "pumpkin", "chamomile_tea"] }
+    ]
+  },
+  {
+    "id": "uterine_fibroids",
+    "allowedFoods": ["fiber_rich_foods", "legumes", "sea_fish", "chicken", "nuts", "plant_oils", "herbal_teas"],
+    "prohibitedFoods": ["high_gi_foods", "fatty_meat", "soy", "alcohol", "canned_foods", "processed_foods"],
+    "dailyPlan": [
+      { "time": "08:00", "mealKey": "whole_grain_bread_avocado_herbal_tea", "ingredients": ["whole_grain_bread", "avocado", "herbal_tea"] },
+      { "time": "13:00", "mealKey": "quinoa_boiled_chicken_stewed_vegetables", "ingredients": ["quinoa", "chicken", "vegetables"] },
+      { "time": "16:00", "mealKey": "apple_peel_nuts", "ingredients": ["apple", "nuts"] },
+      { "time": "19:00", "mealKey": "lentil_soup_cabbage_salad_nettle_tea", "ingredients": ["lentils", "cabbage", "salad", "nettle_tea"] }
     ]
   }
 ]
