@@ -8,8 +8,8 @@ export default function DailyMenu({ menu }) {
         <MealCarousel
           key={idx}
           time={meal.time}
-          label={meal.label}
-          options={meal.options}
+          label={meal.mealKey} // Pass mealKey as label
+          options={meal.ingredients} // Pass ingredients as options
         />
       ))}
     </div>

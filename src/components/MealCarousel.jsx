@@ -14,15 +14,28 @@ export default function MealCarousel({ time, label, options }) {
     slidesToScroll: 1
   };
 
+  // Helper to prettify mealKey if translation is missing
+  function prettifyKey(key) {
+    return key.replace(/_/g, ' ').replace(/\b\w/g, c => c.toUpperCase());
+  }
+
+  // Try to translate meal name, fallback to prettified key
+  const mealName = t(`products.meals.${label}`);
+  const displayMealName = mealName === `products.meals.${label}` ? prettifyKey(label) : mealName;
+
   return (
     <div className="meal-carousel">
-      <h3>{time} — {label ? t(`products.meals.${label}`) : ''}</h3>
+      <h3>{time} — {displayMealName}</h3>
       <Slider {...settings}>
-        {options.map((option, idx) => (
-          <div key={idx} className="meal-option">
-            <p>Option {idx + 1}: {t(`products.meals.${option}`) || option}</p>
-          </div>
-        ))}
+        {options.map((option, idx) => {
+          const ingredientName = t(`products.${option}`);
+          const displayIngredient = ingredientName === `products.${option}` ? prettifyKey(option) : ingredientName;
+          return (
+            <div key={idx} className="meal-option">
+              <p>Ingredient: {displayIngredient}</p>
+            </div>
+          );
+        })}
       </Slider>
     </div>
   );
