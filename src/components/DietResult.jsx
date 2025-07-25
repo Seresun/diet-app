@@ -1,5 +1,9 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
+import { Link } from 'react-router-dom';
+import Slider from 'react-slick';
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
 
 function DietResult({ data }) {
   const { t } = useTranslation();
@@ -20,27 +24,50 @@ function DietResult({ data }) {
       <h2 className="result-title">{t('recommendationsFor')} {data.selectedIds.map(id => t(`diagnoses.${id}`)).join(', ')}</h2>
 
       <h3 className="section-title">{t('allowedFoods')}</h3>
-      <ul className="food-list">
+      <Slider
+        dots={true}
+        infinite={false}
+        speed={500}
+        slidesToShow={4}
+        slidesToScroll={4}
+        responsive={[{ breakpoint: 900, settings: { slidesToShow: 2, slidesToScroll: 2 } }, { breakpoint: 600, settings: { slidesToShow: 1, slidesToScroll: 1 } }]}
+        className="allowed-foods-carousel"
+      >
         {data.allowedFoods.map((item, index) => (
-          <li key={index}>{t(`products.${item}`)}</li>
+          <div key={index} className="food-carousel-item allowed">
+            {t(`products.${item}`)}
+          </div>
         ))}
-      </ul>
+      </Slider>
 
       <h3 className="section-title">{t('prohibitedFoods')}</h3>
-      <ul className="food-list prohibited-list">
+      <Slider
+        dots={true}
+        infinite={false}
+        speed={500}
+        slidesToShow={4}
+        slidesToScroll={4}
+        responsive={[{ breakpoint: 900, settings: { slidesToShow: 2, slidesToScroll: 2 } }, { breakpoint: 600, settings: { slidesToShow: 1, slidesToScroll: 1 } }]}
+        className="prohibited-foods-carousel"
+      >
         {data.prohibitedFoods.map((item, index) => (
-          <li key={index}>{t(`products.${item}`)}</li>
+          <div key={index} className="food-carousel-item prohibited">
+            {t(`products.${item}`)}
+          </div>
         ))}
-      </ul>
+      </Slider>
 
-      <h3 className="section-title">{t('dailyMenu')}</h3>
-      <ul className="food-list meal-plan">
-        {data.dailyPlan.map((entry, index) => (
-          <li key={index}>
-            <span className="meal-time">{entry.time}</span>: {t(`products.meals.${entry.mealKey}`) || entry.mealKey}
-          </li>
-        ))}
-      </ul>
+      {data.dailyPlan && data.dailyPlan.length > 0 && (
+        <div style={{ marginTop: 24 }}>
+          <Link
+            to="/daily-menu"
+            state={{ menu: data.dailyPlan }}
+            className="submit-link"
+          >
+            {t('dailyMenu')}
+          </Link>
+        </div>
+      )}
     </div>
   );
 }

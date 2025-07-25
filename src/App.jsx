@@ -8,6 +8,7 @@ import CustomDiagnosisGPT from './components/CustomDiagnosisGPT';
 import diagnoses from './data/diagnoses.json';
 import './App.css';
 import About from './pages/About';
+import DailyMenuPage from './pages/DailyMenuPage';
 
 function intersect(arrays) {
   if (arrays.length === 0) return [];
@@ -112,6 +113,7 @@ function App() {
               handleSubmit={handleSubmit}
             />
           } />
+          <Route path="/daily-menu" element={<DailyMenuPage />} />
           <Route path="/custom" element={<>
             <h1 className="app-title">{t('title')}</h1>
             <Link to="/">← {t('backToMain')}</Link>
