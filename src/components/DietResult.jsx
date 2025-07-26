@@ -30,7 +30,7 @@ function DietResult({ data }) {
         speed={500}
         slidesToShow={4}
         slidesToScroll={4}
-        responsive={[{ breakpoint: 900, settings: { slidesToShow: 2, slidesToScroll: 2 } }, { breakpoint: 600, settings: { slidesToShow: 1, slidesToScroll: 1 } }]}
+        responsive={[{ breakpoint: 900, settings: { slidesToShow: 4, slidesToScroll: 4 } }, { breakpoint: 600, settings: { slidesToShow: 4, slidesToScroll: 4 } }]}
         className="allowed-foods-carousel"
       >
         {data.allowedFoods.map((item, index) => (
@@ -47,7 +47,7 @@ function DietResult({ data }) {
         speed={500}
         slidesToShow={4}
         slidesToScroll={4}
-        responsive={[{ breakpoint: 900, settings: { slidesToShow: 2, slidesToScroll: 2 } }, { breakpoint: 600, settings: { slidesToShow: 1, slidesToScroll: 1 } }]}
+        responsive={[{ breakpoint: 900, settings: { slidesToShow: 4, slidesToScroll: 4 } }, { breakpoint: 600, settings: { slidesToShow: 4, slidesToScroll: 4 } }]}
         className="prohibited-foods-carousel"
       >
         {data.prohibitedFoods.map((item, index) => (
