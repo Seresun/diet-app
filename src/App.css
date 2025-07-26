@@ -3,7 +3,7 @@
   margin: 0 auto;
   padding: 2rem;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: linear-gradient(135deg, #667eea 0%, #5fd6b9 100%);
   min-height: 100vh;
   color: #333;
   overflow-x: hidden;
@@ -81,7 +81,7 @@
 }
 
 .submit-button {
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: linear-gradient(135deg, #667eea 0%, #5fd6b9 100%);
   color: white;
   border: none;
   padding: 12px 24px;
@@ -97,7 +97,7 @@
 }
 
 .submit-link {
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: linear-gradient(135deg, #667eea 0%, #5fd6b9 100%);
   color: white;
   border: none;
   padding: 12px 24px;
@@ -221,7 +221,7 @@
   position: absolute;
   top: 1rem;
   right: 1rem;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: linear-gradient(135deg, #667eea 0%, #5fd6b9 100%);
   color: white;
   border: none;
   padding: 8px 16px;
