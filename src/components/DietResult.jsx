@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
-import { Textfit } from 'react-textfit';
+import TextFit from './TextFit';
 
 function DietResult({ data }) {
   const { t } = useTranslation();
@@ -36,9 +36,9 @@ function DietResult({ data }) {
       >
         {data.allowedFoods.map((item, index) => (
           <div key={index} className="food-carousel-item allowed">
-            <Textfit mode="multi" min={10} max={18} style={{width: '100%'}}>
+            <TextFit min={10} max={18}>
               {t(`products.${item}`)}
-            </Textfit>
+            </TextFit>
           </div>
         ))}
       </Slider>
@@ -55,9 +55,9 @@ function DietResult({ data }) {
       >
         {data.prohibitedFoods.map((item, index) => (
           <div key={index} className="food-carousel-item prohibited">
-            <Textfit mode="multi" min={10} max={18} style={{width: '100%'}}>
+            <TextFit min={10} max={18}>
               {t(`products.${item}`)}
-            </Textfit>
+            </TextFit>
           </div>
         ))}
       </Slider>
