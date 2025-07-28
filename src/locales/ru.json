@@ -1,5 +1,5 @@
 {
-  "title": "EatLence - Диета по диагнозу",
+  "title": "<span class='eat'>Eat</span><span class='lence'>Lence</span> - Диета по диагнозу",
   "selectDiagnosis": "Выберите диагноз:",
   "selectPlaceholder": "-- выберите диагноз --",
   "showRecommendations": "Показать рекомендации",

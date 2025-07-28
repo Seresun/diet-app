@@ -104,12 +104,12 @@ function App() {
     <BrowserRouter>
       <div className="app-container">
         <header className="app-header">
-          <div className="header-content">
-            <div className="title-container">
-              <img src="/newlogo.png" alt="EatLence" className="app-logo" />
-              <h1 className="app-title">{t('title')}</h1>
-            </div>
+          <div className="header-top">
+            <img src="/newlogo.png" alt="EatLence" className="app-logo" />
             <LanguageSwitcher />
+          </div>
+          <div className="header-bottom">
+            <h1 className="app-title" dangerouslySetInnerHTML={{ __html: t('title') }} />
           </div>
         </header>
         <main className="app-main">

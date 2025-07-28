@@ -27,17 +27,19 @@
   color: white;
 }
 
-.header-content {
+.header-top {
   display: flex;
   justify-content: space-between;
   align-items: center;
   max-width: 100%;
+  margin-bottom: 1rem;
 }
 
-.title-container {
+.header-bottom {
   display: flex;
+  justify-content: center;
   align-items: center;
-  gap: 12px;
+  max-width: 100%;
 }
 
 .app-logo {
@@ -62,6 +64,14 @@
   margin: 0;
   font-weight: 700;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.app-title .eat {
+  color: #e6397e;
+}
+
+.app-title .lence {
+  color: #3d6dd6;
 }
 
 .diet-form {
@@ -388,27 +398,28 @@
   }
   
   .app-title {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
   }
 
-  .header-content {
-    flex-direction: column;
-    gap: 1rem;
-    text-align: center;
+  .header-top {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0;
+    margin-bottom: 0.5rem;
   }
 
-  .title-container {
-    flex-direction: column;
-    gap: 8px;
+  .header-bottom {
+    justify-content: center;
   }
 
   .app-logo {
-    width: 36px;
-    height: 36px;
+    width: 32px;
+    height: 32px;
   }
   
   .language-switcher {
-    align-self: flex-end;
+    align-self: flex-start;
   }
 
   .submit-button,
