@@ -4,7 +4,8 @@ import './LanguageSwitcher.css';
 
 const languages = [
   { code: 'en', name: 'English', flag: '🇺🇸' },
-  { code: 'ru', name: 'Русский', flag: '🇷🇺' }
+  { code: 'ru', name: 'Русский', flag: '🇷🇺' },
+  { code: 'de', name: 'Deutsch', flag: '🇩🇪' }
 ];
 
 export default function LanguageSwitcher() {
