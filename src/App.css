@@ -21,7 +21,7 @@
 }
 
 .app-header {
-  background: linear-gradient(135deg, #667eea 0%, #5fd6b9 100%);
+  background: linear-gradient(135deg, #5fd6b9 0%, #667eea 100%);
   padding: 1.5rem 2rem;
   border-radius: 20px 20px 0 0;
   color: white;
@@ -32,6 +32,24 @@
   justify-content: space-between;
   align-items: center;
   max-width: 100%;
+}
+
+.title-container {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.app-logo {
+  width: 45px;
+  height: 45px;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.2));
+  transition: transform 0.3s ease;
+  border-radius: 8px;
+}
+
+.app-logo:hover {
+  transform: scale(1.05);
 }
 
 .app-main {
@@ -377,6 +395,16 @@
     flex-direction: column;
     gap: 1rem;
     text-align: center;
+  }
+
+  .title-container {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .app-logo {
+    width: 36px;
+    height: 36px;
   }
   
   .language-switcher {

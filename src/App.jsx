@@ -10,6 +10,7 @@ import './App.css';
 import About from './pages/About';
 import DailyMenuPage from './pages/DailyMenuPage';
 
+
 function intersect(arrays) {
   if (arrays.length === 0) return [];
   return arrays.reduce((a, b) => a.filter(x => b.includes(x)));
@@ -104,7 +105,10 @@ function App() {
       <div className="app-container">
         <header className="app-header">
           <div className="header-content">
-            <h1 className="app-title">{t('title')}</h1>
+            <div className="title-container">
+              <img src="/newlogo.png" alt="EatLence" className="app-logo" />
+              <h1 className="app-title">{t('title')}</h1>
+            </div>
             <LanguageSwitcher />
           </div>
         </header>
