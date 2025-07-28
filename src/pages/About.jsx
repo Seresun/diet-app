@@ -1,9 +1,12 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 export default function About() {
+  const { t } = useTranslation();
+  
   return (
     <div className="about-page" style={{ maxWidth: 700, margin: '0 auto' }}>
-      <h1 style={{ fontSize: '2rem', marginBottom: 16 }}>🩺 О проекте</h1>
+      <h1 style={{ fontSize: '2rem', marginBottom: 16 }}>🩺 {t('aboutProject')}</h1>
       <p>Привет! Меня зовут Слава. Я разработчик с медицинским образованием и создал это приложение, чтобы упростить жизнь людям с хроническими заболеваниями.</p>
       <p>
         <b>Зачем это приложение?</b><br/>

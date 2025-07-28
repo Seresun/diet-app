@@ -37,7 +37,7 @@ function MainPage({ resultData, selectedDiagnoses, handleDiagnosesChange, handle
         <Link to="/custom">{t('cantFindDiagnosis')}</Link>
       </div>
       <footer style={{ marginTop: 40, textAlign: 'center' }}>
-        <Link to="/about">О проекте</Link>
+        <Link to="/about">{t('aboutProject')}</Link>
       </footer>
     </>
   );

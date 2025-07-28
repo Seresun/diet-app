@@ -11,6 +11,7 @@
   "tooFewAllowedWarning": "⚠️ Bei den ausgewählten Diagnosen ist die Liste der erlaubten Lebensmittel zu klein, um ein ausgewogenes Menü zu erstellen. Versuchen Sie, eine der Diagnosen zu entfernen, oder wenden Sie sich an einen Arzt für eine individuelle Ernährung.",
   "cantFindDiagnosis": "Finden Sie Ihre Diagnose nicht?",
   "backToMain": "Zurück zur Diagnoseauswahl",
+  "aboutProject": "Über das Projekt",
   "diagnoses": {
     "gastric_ulcer_exacerbation": "Magenulkus-Exazerbation",
     "gastric_ulcer_recovery": "Erholung nach Magenulkus",

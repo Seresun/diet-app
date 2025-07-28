@@ -11,6 +11,7 @@
   "tooFewAllowedWarning": "⚠️ The list of allowed foods for the selected diagnoses is too small to create a balanced menu. Try removing one of the diagnoses or consult a doctor for an individual diet plan.",
   "cantFindDiagnosis": "Can't find your diagnosis?",
   "backToMain": "Back to diagnosis selection",
+  "aboutProject": "About Project",
   "diagnoses": {
     "gastric_ulcer_exacerbation": "Gastric Ulcer Exacerbation",
     "gastric_ulcer_recovery": "Gastric Ulcer Recovery",
