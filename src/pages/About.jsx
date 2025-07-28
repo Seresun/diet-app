@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function About() {
   return (
-    <div className="about-page" style={{ maxWidth: 700, margin: '0 auto', padding: 32 }}>
+    <div className="about-page" style={{ maxWidth: 700, margin: '0 auto' }}>
       <h1 style={{ fontSize: '2rem', marginBottom: 16 }}>🩺 О проекте</h1>
       <p>Привет! Меня зовут Слава. Я разработчик с медицинским образованием и создал это приложение, чтобы упростить жизнь людям с хроническими заболеваниями.</p>
       <p>

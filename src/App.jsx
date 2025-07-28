@@ -25,7 +25,6 @@ function MainPage({ resultData, selectedDiagnoses, handleDiagnosesChange, handle
   const { t } = useTranslation();
   return (
     <>
-      <h1 className="app-title">{t('title')}</h1>
       <DietForm 
         diagnoses={diagnoses} 
         onSubmit={handleSubmit} 
@@ -103,8 +102,14 @@ function App() {
   return (
     <BrowserRouter>
       <div className="app-container">
-        <LanguageSwitcher />
-        <Routes>
+        <header className="app-header">
+          <div className="header-content">
+            <h1 className="app-title">{t('title')}</h1>
+            <LanguageSwitcher />
+          </div>
+        </header>
+        <main className="app-main">
+          <Routes>
           <Route path="/" element={
             <MainPage 
               resultData={resultData}
@@ -115,12 +120,12 @@ function App() {
           } />
           <Route path="/daily-menu" element={<DailyMenuPage />} />
           <Route path="/custom" element={<>
-            <h1 className="app-title">{t('title')}</h1>
             <Link to="/">← {t('backToMain')}</Link>
             <CustomDiagnosisGPT />
           </>} />
           <Route path="/about" element={<About />} />
         </Routes>
+        </main>
       </div>
     </BrowserRouter>
   );

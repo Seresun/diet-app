@@ -66,10 +66,10 @@ function DietResult({ data }) {
         <div style={{ marginTop: 24 }}>
           <Link
             to="/daily-menu"
-            state={{ menu: data.dailyPlan }}
+            state={{ diagnosisId: data.selectedIds[0] }}
             className="submit-link"
           >
-            {t('dailyMenu')}
+            {t('dailyMenuButton')}
           </Link>
         </div>
       )}
