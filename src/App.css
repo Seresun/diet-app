@@ -21,7 +21,7 @@
 }
 
 .app-header {
-  background: linear-gradient(135deg, #5fd6b9 0%, #667eea 100%);
+  background: linear-gradient(320deg, #5fd6b9 0%, #667eea 100%);
   padding: 1.5rem 2rem;
   border-radius: 20px 20px 0 0;
   color: white;
@@ -54,6 +54,16 @@
   transform: scale(1.05);
 }
 
+.logo-link {
+  text-decoration: none;
+  display: inline-block;
+  transition: transform 0.3s ease;
+}
+
+.logo-link:hover {
+  transform: scale(1.05);
+}
+
 .app-main {
   padding: 2rem;
 }
@@ -67,12 +77,14 @@
 }
 
 .app-title .eat {
-  color: #e6397e;
+  color: #64cf0e;
 }
 
 .app-title .lence {
-  color: #3d6dd6;
+  color: #41ccd3;
 }
+
+
 
 .diet-form {
   background: #f7fafc;

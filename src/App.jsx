@@ -105,7 +105,9 @@ function App() {
       <div className="app-container">
         <header className="app-header">
           <div className="header-top">
-            <img src="/newlogo.png" alt="EatLence" className="app-logo" />
+            <Link to="/" className="logo-link">
+              <img src="/newlogo.png" alt="EatLence" className="app-logo" />
+            </Link>
             <LanguageSwitcher />
           </div>
           <div className="header-bottom">
