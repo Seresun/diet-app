@@ -42,6 +42,13 @@
   max-width: 100%;
 }
 
+.title-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
 .app-logo {
   width: 45px;
   height: 45px;
@@ -88,6 +95,15 @@
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
+}
+
+.app-subtitle {
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 1.3rem;
+  margin: 0.5rem 0 0 0;
+  font-weight: 400;
+  text-align: center;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
 }
 
 
@@ -417,6 +433,11 @@
   
   .app-title {
     font-size: 1.2rem;
+  }
+  
+  .app-subtitle {
+    font-size: 0.9rem;
+    margin: 0.3rem 0 0 0;
   }
 
   .header-top {

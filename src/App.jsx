@@ -127,7 +127,10 @@ function App() {
             <LanguageSwitcher />
           </div>
           <div className="header-bottom">
-            <h1 className="app-title" dangerouslySetInnerHTML={{ __html: t('title') }} />
+            <div className="title-container">
+              <h1 className="app-title" dangerouslySetInnerHTML={{ __html: t('title') }} />
+              <p className="app-subtitle">{t('subtitle')}</p>
+            </div>
           </div>
         </header>
         <main className="app-main">

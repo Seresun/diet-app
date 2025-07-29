@@ -1,7 +1,8 @@
 {
-  "title": "<span class='eat'>Eat</span><span class='lence'>Lence</span> - Диета по диагнозу",
-  "selectDiagnosis": "Выберите диагноз:",
-  "selectPlaceholder": "-- выберите диагноз --",
+  "title": "<span class='eat'>Eat</span><span class='lence'>Lence</span> - Ваш персональный план питания",
+  "subtitle": "Здоровое питание - это просто",
+  "selectDiagnosis": "Укажите ваше состояние здоровья:",
+  "selectPlaceholder": "-- выберите --",
   "showRecommendations": "Показать рекомендации",
   "recommendationsFor": "Рекомендации для:",
   "allowedFoods": "✅ Разрешённые продукты:",

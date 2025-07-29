@@ -1,7 +1,8 @@
 {
-  "title": "<span class='eat'>Eat</span><span class='lence'>Lence</span> - Diät nach Diagnose",
-  "selectDiagnosis": "Diagnose auswählen:",
-  "selectPlaceholder": "-- Diagnose auswählen --",
+  "title": "<span class='eat'>Eat</span><span class='lence'>Lence</span> - Ihr persönlicher Ernährungsplan",
+  "subtitle": "Gesund essen war noch nie so einfach",
+  "selectDiagnosis": "Wählen Sie Ihren Gesundheitszustand:",
+  "selectPlaceholder": "-- auswählen --",
   "showRecommendations": "Empfehlungen anzeigen",
   "recommendationsFor": "Empfehlungen für:",
   "allowedFoods": "✅ Erlaubte Lebensmittel:",
