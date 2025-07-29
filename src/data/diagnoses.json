@@ -1,5 +1,321 @@
 [
   {
+    "id": "balanced_diet_general",
+    "allowedFoods": [
+      "vegetables",
+      "fruits",
+      "fish",
+      "lean_meat",
+      "cereals",
+      "dairy_products"
+    ],
+    "prohibitedFoods": [
+      "fried_foods",
+      "fast_food",
+      "soda",
+      "alcohol"
+    ],
+    "dailyPlan": [
+      {
+        "time": "08:00",
+        "mealKey": "oatmeal_fruit_yogurt",
+        "ingredients": [
+          "oatmeal",
+          "fruits",
+          "yogurt"
+        ],
+        "weight_grams": 300,
+        "nutrition": {
+          "calories": 250,
+          "proteins": 9,
+          "fats": 6,
+          "carbs": 40
+        }
+      },
+      {
+        "time": "11:00",
+        "mealKey": "apple_nuts",
+        "ingredients": [
+          "apple",
+          "nuts"
+        ],
+        "weight_grams": 100,
+        "nutrition": {
+          "calories": 120,
+          "proteins": 3,
+          "fats": 6,
+          "carbs": 14
+        }
+      },
+      {
+        "time": "13:00",
+        "mealKey": "vegetable_soup_chicken",
+        "ingredients": [
+          "vegetable_soup",
+          "chicken"
+        ],
+        "weight_grams": 350,
+        "nutrition": {
+          "calories": 280,
+          "proteins": 25,
+          "fats": 7,
+          "carbs": 28
+        }
+      },
+      {
+        "time": "16:00",
+        "mealKey": "yogurt",
+        "ingredients": [
+          "yogurt"
+        ],
+        "weight_grams": 150,
+        "nutrition": {
+          "calories": 90,
+          "proteins": 5,
+          "fats": 3,
+          "carbs": 12
+        }
+      },
+      {
+        "time": "19:00",
+        "mealKey": "fish_rice_vegetables",
+        "ingredients": [
+          "fish",
+          "rice",
+          "vegetables"
+        ],
+        "weight_grams": 350,
+        "nutrition": {
+          "calories": 300,
+          "proteins": 32,
+          "fats": 10,
+          "carbs": 35
+        }
+      }
+    ],
+    "recommendedCalories": {
+      "min": 2000,
+      "max": 2200,
+      "unit": "kcal"
+    }
+  },
+  {
+    "id": "obesity_diet",
+    "allowedFoods": [
+      "vegetables",
+      "fruits",
+      "lean_meat",
+      "fish",
+      "cottage_cheese",
+      "eggs",
+      "legumes",
+      "oatmeal",
+      "berries",
+      "apple",
+      "orange",
+      "chicken",
+      "kefir",
+      "salad"
+    ],
+    "prohibitedFoods": [
+      "sweets",
+      "fatty_meat",
+      "mayonnaise",
+      "soda",
+      "alcohol",
+      "white_bread"
+    ],
+    "dailyPlan": [
+      {
+        "time": "08:00",
+        "mealKey": "oatmeal_berries_egg",
+        "ingredients": [
+          "oatmeal",
+          "berries",
+          "eggs"
+        ],
+        "weight_grams": 250,
+        "nutrition": {
+          "calories": 210,
+          "proteins": 12,
+          "fats": 5,
+          "carbs": 30
+        }
+      },
+      {
+        "time": "11:00",
+        "mealKey": "apple_orange",
+        "ingredients": [
+          "apple",
+          "orange"
+        ],
+        "weight_grams": 200,
+        "nutrition": {
+          "calories": 120,
+          "proteins": 1,
+          "fats": 0,
+          "carbs": 30
+        }
+      },
+      {
+        "time": "13:00",
+        "mealKey": "vegetable_soup_chicken_salad",
+        "ingredients": [
+          "vegetable_soup",
+          "chicken",
+          "vegetables"
+        ],
+        "weight_grams": 350,
+        "nutrition": {
+          "calories": 280,
+          "proteins": 26,
+          "fats": 7,
+          "carbs": 28
+        }
+      },
+      {
+        "time": "16:00",
+        "mealKey": "cottage_cheese_fruits",
+        "ingredients": [
+          "cottage_cheese",
+          "fruits"
+        ],
+        "weight_grams": 150,
+        "nutrition": {
+          "calories": 160,
+          "proteins": 14,
+          "fats": 5,
+          "carbs": 10
+        }
+      },
+      {
+        "time": "19:00",
+        "mealKey": "fish_vegetables_kefir",
+        "ingredients": [
+          "fish",
+          "vegetables",
+          "kefir"
+        ],
+        "weight_grams": 350,
+        "nutrition": {
+          "calories": 300,
+          "proteins": 32,
+          "fats": 10,
+          "carbs": 14
+        }
+      }
+    ],
+    "recommendedCalories": {
+      "min": 1200,
+      "max": 1500,
+      "unit": "kcal"
+    }
+  },
+  {
+    "id": "antiage",
+    "allowedFoods": [
+      "leafy_greens",
+      "berries",
+      "whole_grains",
+      "olive_oil",
+      "nuts",
+      "avocado",
+      "green_tea",
+      "tomatoes"
+    ],
+    "prohibitedFoods": [
+      "processed_meats",
+      "sugar",
+      "trans_fats",
+      "alcohol"
+    ],
+    "dailyPlan": [
+      {
+        "time": "08:00",
+        "mealKey": "whole_grain_toast_avocado_tea",
+        "ingredients": [
+          "whole_grain_bread",
+          "avocado",
+          "green_tea"
+        ],
+        "weight_grams": 250,
+        "nutrition": {
+          "calories": 300,
+          "proteins": 8,
+          "fats": 14,
+          "carbs": 30
+        }
+      },
+      {
+        "time": "11:00",
+        "mealKey": "berry_smoothie",
+        "ingredients": [
+          "berries",
+          "yogurt",
+          "honey"
+        ],
+        "weight_grams": 200,
+        "nutrition": {
+          "calories": 180,
+          "proteins": 6,
+          "fats": 5,
+          "carbs": 30
+        }
+      },
+      {
+        "time": "14:00",
+        "mealKey": "grilled_fish_spinach_salad",
+        "ingredients": [
+          "fish",
+          "spinach",
+          "olive_oil"
+        ],
+        "weight_grams": 350,
+        "nutrition": {
+          "calories": 380,
+          "proteins": 32,
+          "fats": 14,
+          "carbs": 20
+        }
+      },
+      {
+        "time": "17:00",
+        "mealKey": "walnuts_tomatoes",
+        "ingredients": [
+          "walnuts",
+          "tomatoes"
+        ],
+        "weight_grams": 100,
+        "nutrition": {
+          "calories": 220,
+          "proteins": 4,
+          "fats": 15,
+          "carbs": 12
+        }
+      },
+      {
+        "time": "20:00",
+        "mealKey": "vegetable_soup_whole_grain_bread",
+        "ingredients": [
+          "vegetable_soup",
+          "whole_grain_bread"
+        ],
+        "weight_grams": 300,
+        "nutrition": {
+          "calories": 190,
+          "proteins": 7,
+          "fats": 5,
+          "carbs": 28
+        }
+      }
+    ],
+    "recommendedCalories": {
+      "min": 1800,
+      "max": 2200,
+      "unit": "kcal"
+    }
+  },
+  {
     "id": "gastric_ulcer_exacerbation",
     "allowedFoods": [
       "oatmeal",
@@ -720,6 +1036,104 @@
     }
   },
   {
+    "id": "pancreatitis_diet",
+    "allowedFoods": [
+      "pureed_vegetable_soups",
+      "oatmeal",
+      "rice_porridge",
+      "low_fat_fish",
+      "boiled_chicken",
+      "egg_whites",
+      "baked_fruit"
+    ],
+    "prohibitedFoods": [
+      "fatty_foods",
+      "fried_foods",
+      "alcohol",
+      "spicy_foods"
+    ],
+    "dailyPlan": [
+      {
+        "time": "08:00",
+        "mealKey": "oatmeal_water",
+        "ingredients": [
+          "oatmeal",
+          "water"
+        ],
+        "weight_grams": 250,
+        "nutrition": {
+          "calories": 180,
+          "proteins": 6,
+          "fats": 4,
+          "carbs": 32
+        }
+      },
+      {
+        "time": "11:00",
+        "mealKey": "baked_pear",
+        "ingredients": [
+          "pear"
+        ],
+        "weight_grams": 120,
+        "nutrition": {
+          "calories": 70,
+          "proteins": 1,
+          "fats": 0,
+          "carbs": 18
+        }
+      },
+      {
+        "time": "13:00",
+        "mealKey": "vegetable_soup_fish",
+        "ingredients": [
+          "vegetable_soup",
+          "fish"
+        ],
+        "weight_grams": 300,
+        "nutrition": {
+          "calories": 210,
+          "proteins": 22,
+          "fats": 5,
+          "carbs": 20
+        }
+      },
+      {
+        "time": "16:00",
+        "mealKey": "egg_white_omelet",
+        "ingredients": [
+          "egg_white"
+        ],
+        "weight_grams": 100,
+        "nutrition": {
+          "calories": 50,
+          "proteins": 11,
+          "fats": 0,
+          "carbs": 1
+        }
+      },
+      {
+        "time": "19:00",
+        "mealKey": "rice_porridge_baked_apple",
+        "ingredients": [
+          "rice_porridge",
+          "apple"
+        ],
+        "weight_grams": 250,
+        "nutrition": {
+          "calories": 190,
+          "proteins": 5,
+          "fats": 2,
+          "carbs": 40
+        }
+      }
+    ],
+    "recommendedCalories": {
+      "min": 1800,
+      "max": 2200,
+      "unit": "kcal"
+    }
+  },
+  {
     "id": "liver_and_gallbladder_disease",
     "allowedFoods": [
       "vegetables",
@@ -925,92 +1339,187 @@
     }
   },
   {
-    "id": "pancreatitis_diet",
+    "id": "chronic_kidney_disease",
     "allowedFoods": [
-      "pureed_vegetable_soups",
-      "oatmeal",
-      "rice_porridge",
-      "low_fat_fish",
-      "boiled_chicken",
-      "egg_whites",
-      "baked_fruit"
+      "low_protein_foods",
+      "vegetables",
+      "fruits",
+      "rice",
+      "buckwheat",
+      "white_bread",
+      "unsalted_butter",
+      "sugar_free_dairy"
     ],
     "prohibitedFoods": [
-      "fatty_foods",
-      "fried_foods",
-      "alcohol",
-      "spicy_foods"
+      "high_protein_meat",
+      "sausages",
+      "salt",
+      "smoked_foods",
+      "alcohol"
     ],
     "dailyPlan": [
       {
         "time": "08:00",
-        "mealKey": "oatmeal_water",
+        "mealKey": "rice_porridge",
         "ingredients": [
-          "oatmeal",
-          "water"
+          "rice_porridge"
         ],
         "weight_grams": 250,
         "nutrition": {
-          "calories": 180,
-          "proteins": 6,
-          "fats": 4,
-          "carbs": 32
+          "calories": 200,
+          "proteins": 5,
+          "fats": 3,
+          "carbs": 40
         }
       },
       {
         "time": "11:00",
-        "mealKey": "baked_pear",
+        "mealKey": "apple",
+        "ingredients": [
+          "apple"
+        ],
+        "weight_grams": 120,
+        "nutrition": {
+          "calories": 60,
+          "proteins": 0,
+          "fats": 0,
+          "carbs": 15
+        }
+      },
+      {
+        "time": "13:00",
+        "mealKey": "vegetable_soup_white_bread",
+        "ingredients": [
+          "vegetable_soup",
+          "white_bread"
+        ],
+        "weight_grams": 300,
+        "nutrition": {
+          "calories": 180,
+          "proteins": 6,
+          "fats": 4,
+          "carbs": 30
+        }
+      },
+      {
+        "time": "16:00",
+        "mealKey": "yogurt",
+        "ingredients": [
+          "yogurt"
+        ],
+        "weight_grams": 150,
+        "nutrition": {
+          "calories": 90,
+          "proteins": 5,
+          "fats": 3,
+          "carbs": 12
+        }
+      },
+      {
+        "time": "19:00",
+        "mealKey": "buckwheat_vegetables",
+        "ingredients": [
+          "buckwheat",
+          "vegetables"
+        ],
+        "weight_grams": 300,
+        "nutrition": {
+          "calories": 250,
+          "proteins": 8,
+          "fats": 4,
+          "carbs": 45
+        }
+      }
+    ],
+    "recommendedCalories": {
+      "min": 1800,
+      "max": 2200,
+      "unit": "kcal"
+    }
+  },
+  {
+    "id": "kidney_failure_with_edema",
+    "allowedFoods": [
+      "low_sodium_vegetables",
+      "fruits",
+      "low_protein_grains",
+      "sugar_free_dairy"
+    ],
+    "prohibitedFoods": [
+      "salt",
+      "pickles",
+      "processed_foods",
+      "sausages",
+      "alcohol"
+    ],
+    "dailyPlan": [
+      {
+        "time": "08:00",
+        "mealKey": "semolina_milk",
+        "ingredients": [
+          "semolina",
+          "milk"
+        ],
+        "weight_grams": 250,
+        "nutrition": {
+          "calories": 220,
+          "proteins": 7,
+          "fats": 6,
+          "carbs": 38
+        }
+      },
+      {
+        "time": "11:00",
+        "mealKey": "pear",
         "ingredients": [
           "pear"
         ],
         "weight_grams": 120,
         "nutrition": {
           "calories": 70,
-          "proteins": 1,
+          "proteins": 0,
           "fats": 0,
           "carbs": 18
         }
       },
       {
         "time": "13:00",
-        "mealKey": "vegetable_soup_fish",
+        "mealKey": "vegetable_puree",
         "ingredients": [
-          "vegetable_soup",
-          "fish"
+          "vegetable_puree"
         ],
         "weight_grams": 300,
         "nutrition": {
-          "calories": 210,
-          "proteins": 22,
-          "fats": 5,
-          "carbs": 20
+          "calories": 150,
+          "proteins": 3,
+          "fats": 2,
+          "carbs": 30
         }
       },
       {
         "time": "16:00",
-        "mealKey": "egg_white_omelet",
+        "mealKey": "yogurt",
         "ingredients": [
-          "egg_white"
+          "yogurt"
         ],
-        "weight_grams": 100,
+        "weight_grams": 150,
         "nutrition": {
-          "calories": 50,
-          "proteins": 11,
-          "fats": 0,
-          "carbs": 1
+          "calories": 90,
+          "proteins": 5,
+          "fats": 3,
+          "carbs": 12
         }
       },
       {
         "time": "19:00",
-        "mealKey": "rice_porridge_baked_apple",
+        "mealKey": "rice_porridge",
         "ingredients": [
-          "rice_porridge",
-          "apple"
+          "rice_porridge"
         ],
         "weight_grams": 250,
         "nutrition": {
-          "calories": 190,
-          "proteins": 5,
+          "calories": 180,
+          "proteins": 4,
           "fats": 2,
           "carbs": 40
         }
@@ -1023,420 +1532,100 @@
     }
   },
   {
-    "id": "gout_diet",
+    "id": "urolithiasis_oxalates",
     "allowedFoods": [
-      "vegetables_except_sorrel_spinach",
-      "fruits",
-      "berries",
-      "low_fat_dairy",
-      "buckwheat",
-      "oatmeal",
-      "nuts",
+      "white_bread",
+      "cereals",
       "eggs",
-      "alkaline_water",
-      "banana",
-      "zucchini",
-      "cottage_cheese",
-      "apple",
-      "pumpkin",
-      "kefir"
+      "milk",
+      "vegetables_low_oxalate",
+      "fruits"
     ],
     "prohibitedFoods": [
-      "red_meat",
-      "offal",
-      "meat_broth",
-      "fatty_fish",
-      "canned_fish",
-      "alcohol",
+      "spinach",
+      "sorrel",
+      "rhubarb",
+      "chocolate",
       "coffee",
-      "strong_tea"
-    ],
-    "dailyPlan": [
-      {
-        "time": "10:00",
-        "mealKey": "oatmeal_banana",
-        "ingredients": [
-          "oatmeal",
-          "banana"
-        ],
-        "weight_grams": 300,
-        "nutrition": {
-          "calories": 250,
-          "proteins": 7,
-          "fats": 4,
-          "carbs": 50
-        }
-      },
-      {
-        "time": "13:00",
-        "mealKey": "buckwheat_zucchini_egg",
-        "ingredients": [
-          "buckwheat",
-          "zucchini",
-          "eggs"
-        ],
-        "weight_grams": 350,
-        "nutrition": {
-          "calories": 300,
-          "proteins": 20,
-          "fats": 8,
-          "carbs": 40
-        }
-      },
-      {
-        "time": "16:00",
-        "mealKey": "cottage_cheese_apple",
-        "ingredients": [
-          "cottage_cheese",
-          "apple"
-        ],
-        "weight_grams": 150,
-        "nutrition": {
-          "calories": 150,
-          "proteins": 14,
-          "fats": 5,
-          "carbs": 10
-        }
-      },
-      {
-        "time": "19:00",
-        "mealKey": "pumpkin_puree_kefir",
-        "ingredients": [
-          "pumpkin",
-          "kefir"
-        ],
-        "weight_grams": 300,
-        "nutrition": {
-          "calories": 180,
-          "proteins": 8,
-          "fats": 4,
-          "carbs": 32
-        }
-      }
-    ],
-    "recommendedCalories": {
-      "min": 1800,
-      "max": 2200,
-      "unit": "kcal"
-    }
-  },
-  {
-    "id": "obesity_diet",
-    "allowedFoods": [
-      "vegetables",
-      "fruits",
-      "lean_meat",
-      "fish",
-      "cottage_cheese",
-      "eggs",
-      "legumes",
-      "oatmeal",
-      "berries",
-      "apple",
-      "orange",
-      "chicken",
-      "kefir",
-      "salad"
-    ],
-    "prohibitedFoods": [
-      "sweets",
-      "fatty_meat",
-      "mayonnaise",
-      "soda",
-      "alcohol",
-      "white_bread"
+      "alcohol"
     ],
     "dailyPlan": [
       {
         "time": "08:00",
-        "mealKey": "oatmeal_berries_egg",
+        "mealKey": "oatmeal_milk",
         "ingredients": [
           "oatmeal",
-          "berries",
-          "eggs"
+          "milk"
         ],
         "weight_grams": 250,
         "nutrition": {
-          "calories": 210,
-          "proteins": 12,
-          "fats": 5,
-          "carbs": 30
+          "calories": 230,
+          "proteins": 8,
+          "fats": 6,
+          "carbs": 38
         }
       },
       {
         "time": "11:00",
-        "mealKey": "apple_orange",
+        "mealKey": "banana",
         "ingredients": [
-          "apple",
-          "orange"
+          "banana"
         ],
-        "weight_grams": 200,
+        "weight_grams": 120,
         "nutrition": {
-          "calories": 120,
+          "calories": 100,
           "proteins": 1,
           "fats": 0,
-          "carbs": 30
+          "carbs": 23
         }
       },
       {
         "time": "13:00",
-        "mealKey": "vegetable_soup_chicken_salad",
+        "mealKey": "vegetable_soup_egg",
         "ingredients": [
           "vegetable_soup",
-          "chicken",
-          "vegetables"
+          "eggs"
         ],
         "weight_grams": 350,
         "nutrition": {
-          "calories": 280,
-          "proteins": 26,
-          "fats": 7,
-          "carbs": 28
+          "calories": 260,
+          "proteins": 20,
+          "fats": 8,
+          "carbs": 25
         }
       },
       {
         "time": "16:00",
-        "mealKey": "cottage_cheese_fruits",
+        "mealKey": "yogurt",
         "ingredients": [
-          "cottage_cheese",
-          "fruits"
+          "yogurt"
         ],
         "weight_grams": 150,
         "nutrition": {
-          "calories": 160,
-          "proteins": 14,
-          "fats": 5,
-          "carbs": 10
+          "calories": 90,
+          "proteins": 5,
+          "fats": 3,
+          "carbs": 12
         }
       },
       {
         "time": "19:00",
-        "mealKey": "fish_vegetables_kefir",
+        "mealKey": "rice_porridge",
         "ingredients": [
-          "fish",
-          "vegetables",
-          "kefir"
-        ],
-        "weight_grams": 350,
-        "nutrition": {
-          "calories": 300,
-          "proteins": 32,
-          "fats": 10,
-          "carbs": 14
-        }
-      }
-    ],
-    "recommendedCalories": {
-      "min": 1200,
-      "max": 1500,
-      "unit": "kcal"
-    }
-  },
-  {
-    "id": "diabetes_type1",
-    "allowedFoods": [
-      "vegetables",
-      "low_glycemic_fruits",
-      "whole_grains",
-      "lean_meat",
-      "fish",
-      "legumes",
-      "eggs",
-      "low_fat_dairy",
-      "nuts",
-      "seeds",
-      "olive_oil"
-    ],
-    "prohibitedFoods": [
-      "sugary_drinks",
-      "pastries",
-      "candy",
-      "alcohol",
-      "fried_foods",
-      "fast_food"
-    ],
-    "dailyPlan": [
-      {
-        "time": "07:30",
-        "mealKey": "omelet_whole_grain_bread_vegetables",
-        "ingredients": [
-          "egg_white_omelet",
-          "whole_grain_bread",
-          "vegetables"
+          "rice_porridge"
         ],
         "weight_grams": 250,
         "nutrition": {
-          "calories": 250,
-          "proteins": 18,
-          "fats": 8,
-          "carbs": 24
-        }
-      },
-      {
-        "time": "10:30",
-        "mealKey": "cottage_cheese_berries",
-        "ingredients": [
-          "cottage_cheese",
-          "berries"
-        ],
-        "weight_grams": 150,
-        "nutrition": {
-          "calories": 140,
-          "proteins": 16,
-          "fats": 4,
-          "carbs": 10
-        }
-      },
-      {
-        "time": "13:00",
-        "mealKey": "grilled_chicken_quinoa_vegetables",
-        "ingredients": [
-          "chicken",
-          "quinoa",
-          "vegetables"
-        ],
-        "weight_grams": 350,
-        "nutrition": {
-          "calories": 350,
-          "proteins": 32,
-          "fats": 10,
-          "carbs": 32
-        }
-      },
-      {
-        "time": "16:00",
-        "mealKey": "apple_nuts",
-        "ingredients": [
-          "apple",
-          "nuts"
-        ],
-        "weight_grams": 100,
-        "nutrition": {
-          "calories": 130,
-          "proteins": 3,
-          "fats": 6,
-          "carbs": 16
-        }
-      },
-      {
-        "time": "19:00",
-        "mealKey": "baked_fish_buckwheat_salad",
-        "ingredients": [
-          "fish",
-          "buckwheat",
-          "vegetables"
-        ],
-        "weight_grams": 350,
-        "nutrition": {
-          "calories": 320,
-          "proteins": 30,
-          "fats": 9,
-          "carbs": 28
+          "calories": 180,
+          "proteins": 5,
+          "fats": 3,
+          "carbs": 38
         }
       }
     ],
     "recommendedCalories": {
       "min": 1800,
       "max": 2200,
-      "unit": "kcal"
-    }
-  },
-  {
-    "id": "diabetes_type2",
-    "allowedFoods": [
-      "vegetables",
-      "lean_meat",
-      "fish",
-      "legumes",
-      "lentils",
-      "whole_grains",
-      "nuts",
-      "seeds",
-      "cottage_cheese",
-      "cinnamon",
-      "apple",
-      "barley",
-      "turkey",
-      "cabbage",
-      "cucumber",
-      "kefir",
-      "salad"
-    ],
-    "prohibitedFoods": [
-      "fast_carbs",
-      "sweet_drinks",
-      "alcohol",
-      "pastries",
-      "fast_food"
-    ],
-    "dailyPlan": [
-      {
-        "time": "08:00",
-        "mealKey": "cottage_cheese_cinnamon_apple",
-        "ingredients": [
-          "cottage_cheese",
-          "cinnamon",
-          "apple"
-        ],
-        "weight_grams": 180,
-        "nutrition": {
-          "calories": 150,
-          "proteins": 18,
-          "fats": 5,
-          "carbs": 10
-        }
-      },
-      {
-        "time": "12:00",
-        "mealKey": "barley_stewed_turkey_cabbage",
-        "ingredients": [
-          "barley",
-          "turkey",
-          "cabbage"
-        ],
-        "weight_grams": 400,
-        "nutrition": {
-          "calories": 360,
-          "proteins": 28,
-          "fats": 10,
-          "carbs": 40
-        }
-      },
-      {
-        "time": "16:00",
-        "mealKey": "cucumber_nuts",
-        "ingredients": [
-          "cucumber",
-          "nuts"
-        ],
-        "weight_grams": 100,
-        "nutrition": {
-          "calories": 120,
-          "proteins": 4,
-          "fats": 8,
-          "carbs": 6
-        }
-      },
-      {
-        "time": "19:00",
-        "mealKey": "steamed_fish_salad_kefir",
-        "ingredients": [
-          "fish",
-          "vegetables",
-          "kefir"
-        ],
-        "weight_grams": 350,
-        "nutrition": {
-          "calories": 300,
-          "proteins": 32,
-          "fats": 12,
-          "carbs": 12
-        }
-      }
-    ],
-    "recommendedCalories": {
-      "min": 1600,
-      "max": 2000,
       "unit": "kcal"
     }
   },
@@ -1739,95 +1928,105 @@
     }
   },
   {
-    "id": "chronic_kidney_disease",
+    "id": "diabetes_type1",
     "allowedFoods": [
-      "low_protein_foods",
       "vegetables",
-      "fruits",
-      "rice",
-      "buckwheat",
-      "white_bread",
-      "unsalted_butter",
-      "sugar_free_dairy"
+      "low_glycemic_fruits",
+      "whole_grains",
+      "lean_meat",
+      "fish",
+      "legumes",
+      "eggs",
+      "low_fat_dairy",
+      "nuts",
+      "seeds",
+      "olive_oil"
     ],
     "prohibitedFoods": [
-      "high_protein_meat",
-      "sausages",
-      "salt",
-      "smoked_foods",
-      "alcohol"
+      "sugary_drinks",
+      "pastries",
+      "candy",
+      "alcohol",
+      "fried_foods",
+      "fast_food"
     ],
     "dailyPlan": [
       {
-        "time": "08:00",
-        "mealKey": "rice_porridge",
+        "time": "07:30",
+        "mealKey": "omelet_whole_grain_bread_vegetables",
         "ingredients": [
-          "rice_porridge"
+          "egg_white_omelet",
+          "whole_grain_bread",
+          "vegetables"
         ],
         "weight_grams": 250,
         "nutrition": {
-          "calories": 200,
-          "proteins": 5,
-          "fats": 3,
-          "carbs": 40
+          "calories": 250,
+          "proteins": 18,
+          "fats": 8,
+          "carbs": 24
         }
       },
       {
-        "time": "11:00",
-        "mealKey": "apple",
+        "time": "10:30",
+        "mealKey": "cottage_cheese_berries",
         "ingredients": [
-          "apple"
+          "cottage_cheese",
+          "berries"
         ],
-        "weight_grams": 120,
+        "weight_grams": 150,
         "nutrition": {
-          "calories": 60,
-          "proteins": 0,
-          "fats": 0,
-          "carbs": 15
+          "calories": 140,
+          "proteins": 16,
+          "fats": 4,
+          "carbs": 10
         }
       },
       {
         "time": "13:00",
-        "mealKey": "vegetable_soup_white_bread",
+        "mealKey": "grilled_chicken_quinoa_vegetables",
         "ingredients": [
-          "vegetable_soup",
-          "white_bread"
+          "chicken",
+          "quinoa",
+          "vegetables"
         ],
-        "weight_grams": 300,
+        "weight_grams": 350,
         "nutrition": {
-          "calories": 180,
-          "proteins": 6,
-          "fats": 4,
-          "carbs": 30
+          "calories": 350,
+          "proteins": 32,
+          "fats": 10,
+          "carbs": 32
         }
       },
       {
         "time": "16:00",
-        "mealKey": "yogurt",
+        "mealKey": "apple_nuts",
         "ingredients": [
-          "yogurt"
+          "apple",
+          "nuts"
         ],
-        "weight_grams": 150,
+        "weight_grams": 100,
         "nutrition": {
-          "calories": 90,
-          "proteins": 5,
-          "fats": 3,
-          "carbs": 12
+          "calories": 130,
+          "proteins": 3,
+          "fats": 6,
+          "carbs": 16
         }
       },
       {
         "time": "19:00",
-        "mealKey": "buckwheat_vegetables",
+        "mealKey": "baked_fish_buckwheat_salad",
         "ingredients": [
+          "fish",
           "buckwheat",
           "vegetables"
         ],
-        "weight_grams": 300,
+        "weight_grams": 350,
         "nutrition": {
-          "calories": 250,
-          "proteins": 8,
-          "fats": 4,
-          "carbs": 45
+          "calories": 320,
+          "proteins": 30,
+          "fats": 9,
+          "carbs": 28
         }
       }
     ],
@@ -1838,18 +2037,215 @@
     }
   },
   {
-    "id": "kidney_failure_with_edema",
+    "id": "diabetes_type2",
     "allowedFoods": [
-      "low_sodium_vegetables",
-      "fruits",
-      "low_protein_grains",
-      "sugar_free_dairy"
+      "vegetables",
+      "lean_meat",
+      "fish",
+      "legumes",
+      "lentils",
+      "whole_grains",
+      "nuts",
+      "seeds",
+      "cottage_cheese",
+      "cinnamon",
+      "apple",
+      "barley",
+      "turkey",
+      "cabbage",
+      "cucumber",
+      "kefir",
+      "salad"
     ],
     "prohibitedFoods": [
-      "salt",
-      "pickles",
-      "processed_foods",
-      "sausages",
+      "fast_carbs",
+      "sweet_drinks",
+      "alcohol",
+      "pastries",
+      "fast_food"
+    ],
+    "dailyPlan": [
+      {
+        "time": "08:00",
+        "mealKey": "cottage_cheese_cinnamon_apple",
+        "ingredients": [
+          "cottage_cheese",
+          "cinnamon",
+          "apple"
+        ],
+        "weight_grams": 180,
+        "nutrition": {
+          "calories": 150,
+          "proteins": 18,
+          "fats": 5,
+          "carbs": 10
+        }
+      },
+      {
+        "time": "12:00",
+        "mealKey": "barley_stewed_turkey_cabbage",
+        "ingredients": [
+          "barley",
+          "turkey",
+          "cabbage"
+        ],
+        "weight_grams": 400,
+        "nutrition": {
+          "calories": 360,
+          "proteins": 28,
+          "fats": 10,
+          "carbs": 40
+        }
+      },
+      {
+        "time": "16:00",
+        "mealKey": "cucumber_nuts",
+        "ingredients": [
+          "cucumber",
+          "nuts"
+        ],
+        "weight_grams": 100,
+        "nutrition": {
+          "calories": 120,
+          "proteins": 4,
+          "fats": 8,
+          "carbs": 6
+        }
+      },
+      {
+        "time": "19:00",
+        "mealKey": "steamed_fish_salad_kefir",
+        "ingredients": [
+          "fish",
+          "vegetables",
+          "kefir"
+        ],
+        "weight_grams": 350,
+        "nutrition": {
+          "calories": 300,
+          "proteins": 32,
+          "fats": 12,
+          "carbs": 12
+        }
+      }
+    ],
+    "recommendedCalories": {
+      "min": 1600,
+      "max": 2000,
+      "unit": "kcal"
+    }
+  },
+  {
+    "id": "gout_diet",
+    "allowedFoods": [
+      "vegetables_except_sorrel_spinach",
+      "fruits",
+      "berries",
+      "low_fat_dairy",
+      "buckwheat",
+      "oatmeal",
+      "nuts",
+      "eggs",
+      "alkaline_water",
+      "banana",
+      "zucchini",
+      "cottage_cheese",
+      "apple",
+      "pumpkin",
+      "kefir"
+    ],
+    "prohibitedFoods": [
+      "red_meat",
+      "offal",
+      "meat_broth",
+      "fatty_fish",
+      "canned_fish",
+      "alcohol",
+      "coffee",
+      "strong_tea"
+    ],
+    "dailyPlan": [
+      {
+        "time": "10:00",
+        "mealKey": "oatmeal_banana",
+        "ingredients": [
+          "oatmeal",
+          "banana"
+        ],
+        "weight_grams": 300,
+        "nutrition": {
+          "calories": 250,
+          "proteins": 7,
+          "fats": 4,
+          "carbs": 50
+        }
+      },
+      {
+        "time": "13:00",
+        "mealKey": "buckwheat_zucchini_egg",
+        "ingredients": [
+          "buckwheat",
+          "zucchini",
+          "eggs"
+        ],
+        "weight_grams": 350,
+        "nutrition": {
+          "calories": 300,
+          "proteins": 20,
+          "fats": 8,
+          "carbs": 40
+        }
+      },
+      {
+        "time": "16:00",
+        "mealKey": "cottage_cheese_apple",
+        "ingredients": [
+          "cottage_cheese",
+          "apple"
+        ],
+        "weight_grams": 150,
+        "nutrition": {
+          "calories": 150,
+          "proteins": 14,
+          "fats": 5,
+          "carbs": 10
+        }
+      },
+      {
+        "time": "19:00",
+        "mealKey": "pumpkin_puree_kefir",
+        "ingredients": [
+          "pumpkin",
+          "kefir"
+        ],
+        "weight_grams": 300,
+        "nutrition": {
+          "calories": 180,
+          "proteins": 8,
+          "fats": 4,
+          "carbs": 32
+        }
+      }
+    ],
+    "recommendedCalories": {
+      "min": 1800,
+      "max": 2200,
+      "unit": "kcal"
+    }
+  },
+  {
+    "id": "acute_infections",
+    "allowedFoods": [
+      "light_soups",
+      "fruits",
+      "vegetables",
+      "milk",
+      "yogurt",
+      "cereal_porridge"
+    ],
+    "prohibitedFoods": [
+      "fried_foods",
+      "fatty_foods",
       "alcohol"
     ],
     "dailyPlan": [
@@ -1870,30 +2266,31 @@
       },
       {
         "time": "11:00",
-        "mealKey": "pear",
+        "mealKey": "apple",
         "ingredients": [
-          "pear"
+          "apple"
         ],
         "weight_grams": 120,
         "nutrition": {
-          "calories": 70,
+          "calories": 60,
           "proteins": 0,
           "fats": 0,
-          "carbs": 18
+          "carbs": 15
         }
       },
       {
         "time": "13:00",
-        "mealKey": "vegetable_puree",
+        "mealKey": "light_soup_bread",
         "ingredients": [
-          "vegetable_puree"
+          "light_soup",
+          "bread"
         ],
         "weight_grams": 300,
         "nutrition": {
-          "calories": 150,
-          "proteins": 3,
-          "fats": 2,
-          "carbs": 30
+          "calories": 180,
+          "proteins": 8,
+          "fats": 5,
+          "carbs": 28
         }
       },
       {
@@ -1912,16 +2309,16 @@
       },
       {
         "time": "19:00",
-        "mealKey": "rice_porridge",
+        "mealKey": "cereal_porridge",
         "ingredients": [
-          "rice_porridge"
+          "cereal_porridge"
         ],
-        "weight_grams": 250,
+        "weight_grams": 300,
         "nutrition": {
-          "calories": 180,
-          "proteins": 4,
-          "fats": 2,
-          "carbs": 40
+          "calories": 240,
+          "proteins": 8,
+          "fats": 4,
+          "carbs": 44
         }
       }
     ],
@@ -2029,91 +2426,405 @@
     }
   },
   {
-    "id": "nervous_system_disorders",
+    "id": "acne",
     "allowedFoods": [
       "vegetables",
-      "fruits",
-      "milk",
-      "fish",
-      "lean_meat",
-      "cereal_grains"
+      "berries",
+      "whole_grains",
+      "omega3_fish",
+      "green_tea",
+      "nuts",
+      "avocado"
     ],
     "prohibitedFoods": [
-      "caffeine",
-      "alcohol",
-      "spicy_foods"
+      "high_gi_sweets",
+      "soda",
+      "processed_meats",
+      "fried_foods",
+      "excess_dairy"
     ],
     "dailyPlan": [
       {
         "time": "08:00",
-        "mealKey": "oatmeal_milk",
+        "mealKey": "oatmeal_berries_green_tea",
         "ingredients": [
           "oatmeal",
-          "milk"
+          "berries",
+          "green_tea"
         ],
-        "weight_grams": 250,
+        "weight_grams": 300,
         "nutrition": {
-          "calories": 230,
-          "proteins": 8,
-          "fats": 6,
-          "carbs": 38
+          "calories": 260,
+          "proteins": 9,
+          "fats": 7,
+          "carbs": 45
         }
       },
       {
         "time": "11:00",
-        "mealKey": "banana",
+        "mealKey": "apple_walnuts",
         "ingredients": [
-          "banana"
-        ],
-        "weight_grams": 120,
-        "nutrition": {
-          "calories": 100,
-          "proteins": 1,
-          "fats": 0,
-          "carbs": 23
-        }
-      },
-      {
-        "time": "13:00",
-        "mealKey": "vegetable_soup_chicken",
-        "ingredients": [
-          "vegetable_soup",
-          "chicken"
-        ],
-        "weight_grams": 350,
-        "nutrition": {
-          "calories": 280,
-          "proteins": 26,
-          "fats": 8,
-          "carbs": 28
-        }
-      },
-      {
-        "time": "16:00",
-        "mealKey": "yogurt",
-        "ingredients": [
-          "yogurt"
+          "apple",
+          "walnuts"
         ],
         "weight_grams": 150,
         "nutrition": {
-          "calories": 90,
-          "proteins": 5,
-          "fats": 3,
-          "carbs": 12
+          "calories": 180,
+          "proteins": 4,
+          "fats": 9,
+          "carbs": 20
         }
       },
       {
-        "time": "19:00",
-        "mealKey": "fish_rice",
+        "time": "14:00",
+        "mealKey": "grilled_salmon_broccoli_quinoa",
         "ingredients": [
-          "fish",
-          "rice"
+          "salmon",
+          "broccoli",
+          "quinoa"
+        ],
+        "weight_grams": 350,
+        "nutrition": {
+          "calories": 400,
+          "proteins": 32,
+          "fats": 15,
+          "carbs": 35
+        }
+      },
+      {
+        "time": "17:00",
+        "mealKey": "avocado_toast",
+        "ingredients": [
+          "avocado",
+          "whole_grain_bread"
+        ],
+        "weight_grams": 120,
+        "nutrition": {
+          "calories": 210,
+          "proteins": 5,
+          "fats": 12,
+          "carbs": 20
+        }
+      },
+      {
+        "time": "20:00",
+        "mealKey": "vegetable_soup_greens",
+        "ingredients": [
+          "vegetable_soup",
+          "greens"
+        ],
+        "weight_grams": 250,
+        "nutrition": {
+          "calories": 150,
+          "proteins": 5,
+          "fats": 4,
+          "carbs": 25
+        }
+      }
+    ],
+    "recommendedCalories": {
+      "min": 1800,
+      "max": 2200,
+      "unit": "kcal"
+    }
+  },
+  {
+    "id": "pregnancy_lactation",
+    "allowedFoods": [
+      "lean_meat",
+      "eggs",
+      "dairy",
+      "whole_grains",
+      "fruits",
+      "vegetables",
+      "legumes",
+      "nuts"
+    ],
+    "prohibitedFoods": [
+      "alcohol",
+      "raw_fish",
+      "unpasteurized_cheese",
+      "excess_caffeine",
+      "processed_meats"
+    ],
+    "dailyPlan": [
+      {
+        "time": "08:00",
+        "mealKey": "omelette_whole_grain_bread_orange",
+        "ingredients": [
+          "eggs",
+          "whole_grain_bread",
+          "orange"
         ],
         "weight_grams": 300,
         "nutrition": {
           "calories": 320,
+          "proteins": 18,
+          "fats": 12,
+          "carbs": 32
+        }
+      },
+      {
+        "time": "11:00",
+        "mealKey": "yogurt_fruits",
+        "ingredients": [
+          "yogurt",
+          "fruits"
+        ],
+        "weight_grams": 150,
+        "nutrition": {
+          "calories": 120,
+          "proteins": 6,
+          "fats": 4,
+          "carbs": 18
+        }
+      },
+      {
+        "time": "14:00",
+        "mealKey": "chicken_soup_pasta",
+        "ingredients": [
+          "chicken_soup",
+          "whole_grain_pasta"
+        ],
+        "weight_grams": 350,
+        "nutrition": {
+          "calories": 350,
+          "proteins": 30,
+          "fats": 8,
+          "carbs": 40
+        }
+      },
+      {
+        "time": "17:00",
+        "mealKey": "nuts_apple",
+        "ingredients": [
+          "nuts",
+          "apple"
+        ],
+        "weight_grams": 120,
+        "nutrition": {
+          "calories": 190,
+          "proteins": 4,
+          "fats": 12,
+          "carbs": 16
+        }
+      },
+      {
+        "time": "20:00",
+        "mealKey": "grilled_fish_vegetables_rice",
+        "ingredients": [
+          "grilled_fish",
+          "vegetables",
+          "brown_rice"
+        ],
+        "weight_grams": 350,
+        "nutrition": {
+          "calories": 380,
           "proteins": 28,
           "fats": 10,
+          "carbs": 45
+        }
+      }
+    ],
+    "recommendedCalories": {
+      "min": 2000,
+      "max": 2400,
+      "unit": "kcal"
+    }
+  },
+  {
+    "id": "pcos",
+    "allowedFoods": [
+      "vegetables",
+      "whole_grains",
+      "lean_meat",
+      "fish",
+      "nuts",
+      "legumes",
+      "low_gi_fruits"
+    ],
+    "prohibitedFoods": [
+      "high_gi_sweets",
+      "white_bread",
+      "soda",
+      "fast_food"
+    ],
+    "dailyPlan": [
+      {
+        "time": "08:00",
+        "mealKey": "egg_white_omelet_vegetables",
+        "ingredients": [
+          "egg_white",
+          "vegetables"
+        ],
+        "weight_grams": 250,
+        "nutrition": {
+          "calories": 180,
+          "proteins": 14,
+          "fats": 6,
+          "carbs": 15
+        }
+      },
+      {
+        "time": "11:00",
+        "mealKey": "apple_nuts",
+        "ingredients": [
+          "apple",
+          "nuts"
+        ],
+        "weight_grams": 120,
+        "nutrition": {
+          "calories": 160,
+          "proteins": 4,
+          "fats": 9,
+          "carbs": 12
+        }
+      },
+      {
+        "time": "14:00",
+        "mealKey": "grilled_chicken_quinoa_broccoli",
+        "ingredients": [
+          "chicken",
+          "quinoa",
+          "broccoli"
+        ],
+        "weight_grams": 350,
+        "nutrition": {
+          "calories": 350,
+          "proteins": 30,
+          "fats": 10,
+          "carbs": 35
+        }
+      },
+      {
+        "time": "17:00",
+        "mealKey": "yogurt_flax_seeds",
+        "ingredients": [
+          "yogurt",
+          "flax_seeds"
+        ],
+        "weight_grams": 150,
+        "nutrition": {
+          "calories": 130,
+          "proteins": 8,
+          "fats": 5,
+          "carbs": 12
+        }
+      },
+      {
+        "time": "20:00",
+        "mealKey": "baked_fish_spinach",
+        "ingredients": [
+          "fish",
+          "spinach"
+        ],
+        "weight_grams": 300,
+        "nutrition": {
+          "calories": 280,
+          "proteins": 28,
+          "fats": 9,
+          "carbs": 10
+        }
+      }
+    ],
+    "recommendedCalories": {
+      "min": 1800,
+      "max": 2200,
+      "unit": "kcal"
+    }
+  },
+  {
+    "id": "endometriosis",
+    "allowedFoods": [
+      "leafy_greens",
+      "berries",
+      "whole_grains",
+      "omega3_fish",
+      "nuts",
+      "legumes"
+    ],
+    "prohibitedFoods": [
+      "red_meat",
+      "trans_fats",
+      "sugar",
+      "alcohol"
+    ],
+    "dailyPlan": [
+      {
+        "time": "08:00",
+        "mealKey": "soy_yogurt_berries_flax",
+        "ingredients": [
+          "soy_yogurt",
+          "berries",
+          "flax_seeds"
+        ],
+        "weight_grams": 250,
+        "nutrition": {
+          "calories": 220,
+          "proteins": 12,
+          "fats": 7,
+          "carbs": 28
+        }
+      },
+      {
+        "time": "11:00",
+        "mealKey": "green_smoothie",
+        "ingredients": [
+          "spinach",
+          "apple",
+          "banana"
+        ],
+        "weight_grams": 200,
+        "nutrition": {
+          "calories": 150,
+          "proteins": 4,
+          "fats": 2,
+          "carbs": 34
+        }
+      },
+      {
+        "time": "14:00",
+        "mealKey": "grilled_salmon_quinoa_spinach",
+        "ingredients": [
+          "salmon",
+          "quinoa",
+          "spinach"
+        ],
+        "weight_grams": 350,
+        "nutrition": {
+          "calories": 400,
+          "proteins": 32,
+          "fats": 15,
+          "carbs": 35
+        }
+      },
+      {
+        "time": "17:00",
+        "mealKey": "almonds_dried_apricots",
+        "ingredients": [
+          "almonds",
+          "dried_apricots"
+        ],
+        "weight_grams": 100,
+        "nutrition": {
+          "calories": 220,
+          "proteins": 5,
+          "fats": 12,
+          "carbs": 24
+        }
+      },
+      {
+        "time": "20:00",
+        "mealKey": "vegetable_soup_whole_grain_bread",
+        "ingredients": [
+          "vegetable_soup",
+          "whole_grain_bread"
+        ],
+        "weight_grams": 300,
+        "nutrition": {
+          "calories": 180,
+          "proteins": 7,
+          "fats": 4,
           "carbs": 30
         }
       }
@@ -2125,189 +2836,96 @@
     }
   },
   {
-    "id": "acute_infections",
+    "id": "pms",
     "allowedFoods": [
-      "light_soups",
+      "magnesium_rich_foods",
+      "whole_grains",
       "fruits",
       "vegetables",
-      "milk",
-      "yogurt",
-      "cereal_porridge"
+      "lean_meat",
+      "legumes"
     ],
     "prohibitedFoods": [
-      "fried_foods",
-      "fatty_foods",
-      "alcohol"
-    ],
-    "dailyPlan": [
-      {
-        "time": "08:00",
-        "mealKey": "semolina_milk",
-        "ingredients": [
-          "semolina",
-          "milk"
-        ],
-        "weight_grams": 250,
-        "nutrition": {
-          "calories": 220,
-          "proteins": 7,
-          "fats": 6,
-          "carbs": 38
-        }
-      },
-      {
-        "time": "11:00",
-        "mealKey": "apple",
-        "ingredients": [
-          "apple"
-        ],
-        "weight_grams": 120,
-        "nutrition": {
-          "calories": 60,
-          "proteins": 0,
-          "fats": 0,
-          "carbs": 15
-        }
-      },
-      {
-        "time": "13:00",
-        "mealKey": "light_soup_bread",
-        "ingredients": [
-          "light_soup",
-          "bread"
-        ],
-        "weight_grams": 300,
-        "nutrition": {
-          "calories": 180,
-          "proteins": 8,
-          "fats": 5,
-          "carbs": 28
-        }
-      },
-      {
-        "time": "16:00",
-        "mealKey": "yogurt",
-        "ingredients": [
-          "yogurt"
-        ],
-        "weight_grams": 150,
-        "nutrition": {
-          "calories": 90,
-          "proteins": 5,
-          "fats": 3,
-          "carbs": 12
-        }
-      },
-      {
-        "time": "19:00",
-        "mealKey": "cereal_porridge",
-        "ingredients": [
-          "cereal_porridge"
-        ],
-        "weight_grams": 300,
-        "nutrition": {
-          "calories": 240,
-          "proteins": 8,
-          "fats": 4,
-          "carbs": 44
-        }
-      }
-    ],
-    "recommendedCalories": {
-      "min": 1800,
-      "max": 2200,
-      "unit": "kcal"
-    }
-  },
-  {
-    "id": "urolithiasis_oxalates",
-    "allowedFoods": [
-      "white_bread",
-      "cereals",
-      "eggs",
-      "milk",
-      "vegetables_low_oxalate",
-      "fruits"
-    ],
-    "prohibitedFoods": [
-      "spinach",
-      "sorrel",
-      "rhubarb",
-      "chocolate",
+      "salt_excess",
+      "soda",
       "coffee",
       "alcohol"
     ],
     "dailyPlan": [
       {
         "time": "08:00",
-        "mealKey": "oatmeal_milk",
+        "mealKey": "oatmeal_banana_nuts",
         "ingredients": [
           "oatmeal",
-          "milk"
+          "banana",
+          "nuts"
         ],
-        "weight_grams": 250,
+        "weight_grams": 300,
         "nutrition": {
-          "calories": 230,
-          "proteins": 8,
-          "fats": 6,
-          "carbs": 38
+          "calories": 320,
+          "proteins": 10,
+          "fats": 12,
+          "carbs": 42
         }
       },
       {
         "time": "11:00",
-        "mealKey": "banana",
+        "mealKey": "yogurt_apple",
         "ingredients": [
-          "banana"
-        ],
-        "weight_grams": 120,
-        "nutrition": {
-          "calories": 100,
-          "proteins": 1,
-          "fats": 0,
-          "carbs": 23
-        }
-      },
-      {
-        "time": "13:00",
-        "mealKey": "vegetable_soup_egg",
-        "ingredients": [
-          "vegetable_soup",
-          "eggs"
-        ],
-        "weight_grams": 350,
-        "nutrition": {
-          "calories": 260,
-          "proteins": 20,
-          "fats": 8,
-          "carbs": 25
-        }
-      },
-      {
-        "time": "16:00",
-        "mealKey": "yogurt",
-        "ingredients": [
-          "yogurt"
+          "yogurt",
+          "apple"
         ],
         "weight_grams": 150,
         "nutrition": {
-          "calories": 90,
-          "proteins": 5,
-          "fats": 3,
-          "carbs": 12
+          "calories": 120,
+          "proteins": 6,
+          "fats": 4,
+          "carbs": 20
         }
       },
       {
-        "time": "19:00",
-        "mealKey": "rice_porridge",
+        "time": "14:00",
+        "mealKey": "grilled_chicken_spinach",
         "ingredients": [
-          "rice_porridge"
+          "chicken",
+          "spinach"
         ],
-        "weight_grams": 250,
+        "weight_grams": 300,
+        "nutrition": {
+          "calories": 280,
+          "proteins": 30,
+          "fats": 8,
+          "carbs": 15
+        }
+      },
+      {
+        "time": "17:00",
+        "mealKey": "nuts_dried_fruits",
+        "ingredients": [
+          "nuts",
+          "dried_fruits"
+        ],
+        "weight_grams": 100,
+        "nutrition": {
+          "calories": 200,
+          "proteins": 5,
+          "fats": 12,
+          "carbs": 18
+        }
+      },
+      {
+        "time": "20:00",
+        "mealKey": "vegetable_soup_whole_grain_bread",
+        "ingredients": [
+          "vegetable_soup",
+          "whole_grain_bread"
+        ],
+        "weight_grams": 300,
         "nutrition": {
           "calories": 180,
-          "proteins": 5,
-          "fats": 3,
-          "carbs": 38
+          "proteins": 7,
+          "fats": 4,
+          "carbs": 30
         }
       }
     ],
@@ -2318,36 +2936,37 @@
     }
   },
   {
-    "id": "balanced_diet_general",
+    "id": "menopause",
     "allowedFoods": [
-      "vegetables",
-      "fruits",
+      "soy_products",
+      "leafy_greens",
+      "berries",
+      "whole_grains",
       "fish",
-      "lean_meat",
-      "cereals",
-      "dairy_products"
+      "nuts",
+      "seeds"
     ],
     "prohibitedFoods": [
-      "fried_foods",
-      "fast_food",
-      "soda",
-      "alcohol"
+      "alcohol",
+      "processed_meats",
+      "sugar",
+      "excess_salt"
     ],
     "dailyPlan": [
       {
         "time": "08:00",
-        "mealKey": "oatmeal_fruit_yogurt",
+        "mealKey": "soy_yogurt_berries_flax",
         "ingredients": [
-          "oatmeal",
-          "fruits",
-          "yogurt"
+          "soy_yogurt",
+          "berries",
+          "flax_seeds"
         ],
-        "weight_grams": 300,
+        "weight_grams": 250,
         "nutrition": {
-          "calories": 250,
-          "proteins": 9,
-          "fats": 6,
-          "carbs": 40
+          "calories": 220,
+          "proteins": 12,
+          "fats": 7,
+          "carbs": 28
         }
       },
       {
@@ -2357,62 +2976,64 @@
           "apple",
           "nuts"
         ],
-        "weight_grams": 100,
+        "weight_grams": 120,
         "nutrition": {
-          "calories": 120,
-          "proteins": 3,
-          "fats": 6,
-          "carbs": 14
-        }
-      },
-      {
-        "time": "13:00",
-        "mealKey": "vegetable_soup_chicken",
-        "ingredients": [
-          "vegetable_soup",
-          "chicken"
-        ],
-        "weight_grams": 350,
-        "nutrition": {
-          "calories": 280,
-          "proteins": 25,
-          "fats": 7,
-          "carbs": 28
-        }
-      },
-      {
-        "time": "16:00",
-        "mealKey": "yogurt",
-        "ingredients": [
-          "yogurt"
-        ],
-        "weight_grams": 150,
-        "nutrition": {
-          "calories": 90,
-          "proteins": 5,
-          "fats": 3,
+          "calories": 160,
+          "proteins": 4,
+          "fats": 9,
           "carbs": 12
         }
       },
       {
-        "time": "19:00",
-        "mealKey": "fish_rice_vegetables",
+        "time": "14:00",
+        "mealKey": "grilled_salmon_quinoa_broccoli",
         "ingredients": [
-          "fish",
-          "rice",
-          "vegetables"
+          "salmon",
+          "quinoa",
+          "broccoli"
         ],
         "weight_grams": 350,
         "nutrition": {
-          "calories": 300,
+          "calories": 400,
           "proteins": 32,
-          "fats": 10,
+          "fats": 15,
           "carbs": 35
+        }
+      },
+      {
+        "time": "17:00",
+        "mealKey": "green_smoothie",
+        "ingredients": [
+          "spinach",
+          "banana",
+          "soy_milk"
+        ],
+        "weight_grams": 200,
+        "nutrition": {
+          "calories": 150,
+          "proteins": 6,
+          "fats": 3,
+          "carbs": 30
+        }
+      },
+      {
+        "time": "20:00",
+        "mealKey": "vegetable_soup_whole_grain_bread",
+        "ingredients": [
+          "vegetable_soup",
+          "whole_grain_bread"
+        ],
+        "weight_grams": 300,
+        "nutrition": {
+          "calories": 180,
+          "proteins": 7,
+          "fats": 4,
+          "carbs": 30
         }
       }
     ],
     "recommendedCalories": {
-      "min": 2000,
+      "min": 1800,
       "max": 2200,
       "unit": "kcal"
     }

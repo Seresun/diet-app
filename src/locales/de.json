@@ -36,7 +36,14 @@
     "nervous_system_disorders": "Nervensystem-Erkrankungen",
     "acute_infections": "Akute Infektionen",
     "urolithiasis_oxalates": "Harnsteine (Oxalate)",
-    "balanced_diet_general": "Ausgewogene Diät (allgemein)"
+    "balanced_diet_general": "Ausgewogene Diät (allgemein)",
+    "acne": "Akne",
+    "antiage": "Anti-Aging Ernährung",
+    "pregnancy_lactation": "Schwangerschaft & Stillzeit",
+    "pcos": "Polyzystisches Ovarsyndrom (PCOS)",
+    "endometriosis": "Endometriose",
+    "pms": "Prämenstruelles Syndrom (PMS)",
+    "menopause": "Wechseljahre"
   },
   "calorieSelector": {
     "recommended": "Empfohlene Kalorien",
@@ -139,7 +146,10 @@
     "spinach": "Spinat",
     "sorrel": "Sauerampfer",
     "rhubarb": "Rhabarber",
-    "chocolate": "Schokolade"
+    "chocolate": "Schokolade",
+    "avocado": "Avocado",
+    "flax_seeds": "Leinsamen",
+    "dried_apricots": "Getrocknete Aprikosen"
   },
   "meals": {
     "oatmeal_milk_honey": "Haferflocken mit Milch und Honig",
@@ -182,6 +192,12 @@
     "stewed_turkey_potato_carrot": "Geschmorter Truthahn mit Kartoffel und Karotte",
     "steamed_fish_cauliflower": "Gedämpfter Fisch mit Blumenkohl",
     "meat_potato": "Fleisch mit Kartoffel",
-    "fish_rice": "Fisch mit Reis"
+    "fish_rice": "Fisch mit Reis",
+    "avocado_toast": "Avocado-Toast",
+    "whole_grain_toast_avocado_tea": "Vollkorntoast, Avocado, Tee",
+    "green_smoothie": "Grüner Smoothie",
+    "soy_yogurt_berries_flax": "Sojajoghurt, Beeren, Leinsamen",
+    "almonds_dried_apricots": "Mandeln und getrocknete Aprikosen",
+    "grilled_salmon_broccoli_quinoa": "Gegrillter Lachs, Brokkoli, Quinoa"
   }
-} 
+}

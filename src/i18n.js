@@ -15,6 +15,14 @@ i18n
     lng: 'ru', // default language
     fallbackLng: 'en',
     interpolation: { escapeValue: false },
+    // Отключаем кэширование для разработки
+    debug: true,
+    saveMissing: false,
+    missingKeyHandler: false,
+    // Принудительно обновляем ресурсы
+    updateMissing: true,
+    // Очищаем кэш при инициализации
+    initImmediate: false,
   });
 
 export default i18n; 

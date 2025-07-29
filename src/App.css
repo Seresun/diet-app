@@ -77,11 +77,17 @@
 }
 
 .app-title .eat {
-  color: #64cf0e;
+  background: #42e347;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
 .app-title .lence {
-  color: #41ccd3;
+  background: #2164dd;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
 

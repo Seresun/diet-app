@@ -5,11 +5,9 @@ import DietForm from './components/DietForm';
 import DietResult from './components/DietResult';
 import LanguageSwitcher from './components/LanguageSwitcher';
 import CustomDiagnosisGPT from './components/CustomDiagnosisGPT';
-import diagnoses from './data/diagnoses.json';
 import './App.css';
 import About from './pages/About';
 import DailyMenuPage from './pages/DailyMenuPage';
-
 
 function intersect(arrays) {
   if (arrays.length === 0) return [];
@@ -22,7 +20,7 @@ function union(arrays) {
 
 const LOCAL_STORAGE_KEY = 'selectedDiagnoses';
 
-function MainPage({ resultData, selectedDiagnoses, handleDiagnosesChange, handleSubmit }) {
+function MainPage({ resultData, selectedDiagnoses, handleDiagnosesChange, handleSubmit, diagnoses }) {
   const { t } = useTranslation();
   return (
     <>
@@ -47,6 +45,18 @@ function App() {
   const { t } = useTranslation();
   const [resultData, setResultData] = useState(null);
   const [selectedDiagnoses, setSelectedDiagnoses] = useState([]);
+  const [diagnoses, setDiagnoses] = useState([]);
+
+  // Загружаем диагнозы при монтировании компонента
+  useEffect(() => {
+    import('./data/diagnoses.json')
+      .then(module => {
+        setDiagnoses(module.default);
+      })
+      .catch(err => {
+        console.error('Failed to load diagnoses:', err);
+      });
+  }, []);
 
   useEffect(() => {
     const saved = localStorage.getItem(LOCAL_STORAGE_KEY);
@@ -59,7 +69,7 @@ function App() {
         }
       } catch { /* ignore */ }
     }
-  }, []);
+  }, [diagnoses]); // Добавляем diagnoses в зависимости
 
   useEffect(() => {
     localStorage.setItem(LOCAL_STORAGE_KEY, JSON.stringify(selectedDiagnoses));
@@ -122,6 +132,7 @@ function App() {
               selectedDiagnoses={selectedDiagnoses}
               handleDiagnosesChange={handleDiagnosesChange}
               handleSubmit={handleSubmit}
+              diagnoses={diagnoses}
             />
           } />
           <Route path="/daily-menu" element={<DailyMenuPage />} />
