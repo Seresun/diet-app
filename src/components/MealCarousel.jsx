@@ -20,8 +20,8 @@ export default function MealCarousel({ time, label, options }) {
   }
 
   // Try to translate meal name, fallback to prettified key
-  const mealName = t(`products.meals.${label}`);
-  const displayMealName = mealName === `products.meals.${label}` ? prettifyKey(label) : mealName;
+  const mealName = t(`meals.${label}`);
+  const displayMealName = mealName === `meals.${label}` ? prettifyKey(label) : mealName;
 
   return (
     <div className="meal-carousel">
@@ -32,7 +32,7 @@ export default function MealCarousel({ time, label, options }) {
           const displayIngredient = ingredientName === `products.${option}` ? prettifyKey(option) : ingredientName;
           return (
             <div key={idx} className="meal-option">
-              <p>Ingredient: {displayIngredient}</p>
+              <p>{t('ingredient')}: {displayIngredient}</p>
             </div>
           );
         })}

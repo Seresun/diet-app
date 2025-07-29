@@ -28,7 +28,6 @@ export default function DailyMenu({ menu }) {
       {menu.map((meal, idx) => (
         <div key={idx} className="meal-container">
           <div className="meal-header">
-            <h4>{meal.time} — {meal.mealKey.replace(/_/g, ' ').replace(/\b\w/g, c => c.toUpperCase())}</h4>
             <div className="meal-nutrition">
               <span className="portion">{t('dailyMenu.portion')}: {meal.weight_grams}g</span>
               <span className="calories">{meal.nutrition.calories} kcal</span>

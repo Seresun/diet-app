@@ -2843,7 +2843,17 @@
       "fruits",
       "vegetables",
       "lean_meat",
-      "legumes"
+      "legumes",
+      "oatmeal",
+      "banana",
+      "nuts",
+      "yogurt",
+      "apple",
+      "chicken",
+      "spinach",
+      "dried_fruits",
+      "vegetable_soup",
+      "whole_grain_bread"
     ],
     "prohibitedFoods": [
       "salt_excess",

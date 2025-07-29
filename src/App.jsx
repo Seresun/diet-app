@@ -86,7 +86,13 @@ function App() {
       setResultData(null);
       return;
     }
-    const allowedFoods = intersect(selected.map(d => d.allowedFoods));
+    
+    // Для одного диагноза используем его разрешенные продукты напрямую
+    // Для нескольких диагнозов - пересечение
+    const allowedFoods = selected.length === 1 
+      ? selected[0].allowedFoods 
+      : intersect(selected.map(d => d.allowedFoods));
+    
     const prohibitedFoods = union(selected.map(d => d.prohibitedFoods));
     const allPlans = selected.map(d => d.dailyPlan).flat();
     const filteredPlan = allPlans.filter(entry => {
