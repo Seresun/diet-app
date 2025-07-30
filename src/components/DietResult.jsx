@@ -31,12 +31,27 @@ function DietResult({ data }) {
         speed={500}
         slidesToShow={4}
         slidesToScroll={4}
-        responsive={[{ breakpoint: 900, settings: { slidesToShow: 4, slidesToScroll: 4 } }, { breakpoint: 600, settings: { slidesToShow: 4, slidesToScroll: 4 } }]}
+        responsive={[
+          { 
+            breakpoint: 900, 
+            settings: { 
+              slidesToShow: 3, 
+              slidesToScroll: 3 
+            } 
+          }, 
+          { 
+            breakpoint: 600, 
+            settings: { 
+              slidesToShow: 2, 
+              slidesToScroll: 2 
+            } 
+          }
+        ]}
         className="allowed-foods-carousel"
       >
         {data.allowedFoods.map((item, index) => (
           <div key={index} className="food-carousel-item allowed">
-            <TextFit min={10} max={18}>
+            <TextFit min={8} max={16}>
               {t(`products.${item}`)}
             </TextFit>
           </div>
@@ -50,12 +65,27 @@ function DietResult({ data }) {
         speed={500}
         slidesToShow={4}
         slidesToScroll={4}
-        responsive={[{ breakpoint: 900, settings: { slidesToShow: 4, slidesToScroll: 4 } }, { breakpoint: 600, settings: { slidesToShow: 4, slidesToScroll: 4 } }]}
+        responsive={[
+          { 
+            breakpoint: 900, 
+            settings: { 
+              slidesToShow: 3, 
+              slidesToScroll: 3 
+            } 
+          }, 
+          { 
+            breakpoint: 600, 
+            settings: { 
+              slidesToShow: 2, 
+              slidesToScroll: 2 
+            } 
+          }
+        ]}
         className="prohibited-foods-carousel"
       >
         {data.prohibitedFoods.map((item, index) => (
           <div key={index} className="food-carousel-item prohibited">
-            <TextFit min={10} max={18}>
+            <TextFit min={8} max={16}>
               {t(`products.${item}`)}
             </TextFit>
           </div>
