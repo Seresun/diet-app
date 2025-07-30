@@ -195,6 +195,9 @@
     "broccoli": "Brokkoli"
   },
   "meals": {
+    "buckwheat_zucchini_egg": "Buchweizen mit Zucchini und Ei",
+    "cottage_cheese_apple": "Hüttenkäse mit Apfel",
+    "pumpkin_puree_kefir": "Kürbispüree mit Kefir",
     "oatmeal_milk_honey": "Haferflocken mit Milch und Honig",
     "milk_jelly": "Milchgelee",
     "mashed_potatoes_boiled_chicken": "Kartoffelpüree mit gekochtem Huhn",
@@ -225,9 +228,7 @@
     "baked_pear": "Gebackene Birne",
     "vegetable_soup_fish": "Gemüsesuppe mit Fisch",
     "egg_white_omelet": "Eiweiß-Omelett",
-    "rice_porridge_baked_apple": "Reisbrei mit gebackenem Apfel",
-    "buckwheat_zucchini_egg": "Buchweizen mit Zucchini und Ei",
-    "pumpkin_puree_kefir": "Kürbispüree mit Kefir",
+          "rice_porridge_baked_apple": "Reisbrei mit gebackenem Apfel",
     "omelet_whole_grain_bread_vegetables": "Omelett mit Vollkornbrot und Gemüse",
     "grilled_chicken_quinoa_vegetables": "Gegrilltes Huhn mit Quinoa und Gemüse",
     "baked_fish_buckwheat_salad": "Gebackener Fisch mit Buchweizen und Salat",
@@ -285,7 +286,6 @@
     "vegetable_soup_egg": "Gemüsesuppe mit Ei",
     "apple_nuts": "Apfel mit Nüssen",
     "apple_walnuts": "Apfel mit Walnüssen",
-    "cottage_cheese_apple": "Hüttenkäse mit Apfel",
     "cottage_cheese_berries": "Hüttenkäse mit Beeren",
     "cottage_cheese_cinnamon_apple": "Hüttenkäse mit Zimt und Apfel",
     "cottage_cheese_honey": "Hüttenkäse mit Honig",

@@ -5,7 +5,7 @@ import "slick-carousel/slick/slick-theme.css";
 import { useTranslation } from 'react-i18next';
 
 export default function MealCarousel({ time, label, options }) {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
   const settings = {
     dots: true,
     infinite: false,
@@ -19,17 +19,46 @@ export default function MealCarousel({ time, label, options }) {
     return key.replace(/_/g, ' ').replace(/\b\w/g, c => c.toUpperCase());
   }
 
-  // Try to translate meal name, fallback to prettified key
-  const mealName = t(`meals.${label}`);
-  const displayMealName = mealName === `meals.${label}` ? prettifyKey(label) : mealName;
+  // Try to get translation directly from resources
+  const getMealTranslation = (key) => {
+    const currentLang = i18n.language;
+    const resources = i18n.store.data[currentLang];
+    
+    console.log(`DEBUG: Looking for meal key "${key}" in language "${currentLang}"`);
+    console.log(`DEBUG: Resources available:`, resources);
+    
+    if (resources && resources.translation && resources.translation.meals) {
+      console.log(`DEBUG: Meals available:`, Object.keys(resources.translation.meals));
+      if (resources.translation.meals[key]) {
+        console.log(`DEBUG: Found translation for "${key}": "${resources.translation.meals[key]}"`);
+        return resources.translation.meals[key];
+      } else {
+        console.log(`DEBUG: No translation found for "${key}"`);
+      }
+    } else {
+      console.log(`DEBUG: No meals section found in resources`);
+    }
+    
+    return prettifyKey(key);
+  };
+
+  const getProductTranslation = (key) => {
+    const currentLang = i18n.language;
+    const resources = i18n.store.data[currentLang];
+    if (resources && resources.translation && resources.translation.products && resources.translation.products[key]) {
+      return resources.translation.products[key];
+    }
+    return prettifyKey(key);
+  };
+
+  const displayMealName = getMealTranslation(label);
 
   return (
     <div className="meal-carousel">
       <h3>{time} — {displayMealName}</h3>
       <Slider {...settings}>
         {options.map((option, idx) => {
-          const ingredientName = t(`products.${option}`);
-          const displayIngredient = ingredientName === `products.${option}` ? prettifyKey(option) : ingredientName;
+          const displayIngredient = getProductTranslation(option);
           return (
             <div key={idx} className="meal-option">
               <p>{t('ingredient')}: {displayIngredient}</p>
