@@ -129,7 +129,6 @@ function App() {
           <div className="header-bottom">
             <div className="title-container">
               <h1 className="app-title" dangerouslySetInnerHTML={{ __html: t('title') }} />
-              <p className="app-subtitle">{t('subtitle')}</p>
             </div>
           </div>
         </header>

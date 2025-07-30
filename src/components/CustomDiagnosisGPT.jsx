@@ -1,6 +1,8 @@
 import React, { useState } from "react";
+import { useTranslation } from "react-i18next";
 
 export default function CustomDiagnosisGPT() {
+  const { t } = useTranslation();
   const [diagnosis, setDiagnosis] = useState("");
   const [loading, setLoading] = useState(false);
   const [result, setResult] = useState("");
@@ -32,13 +34,13 @@ export default function CustomDiagnosisGPT() {
 
   return (
     <div style={{ marginTop: 32, padding: 24, background: '#f7fafc', borderRadius: 12 }}>
-      <h2 style={{ marginBottom: 8 }}>Can't find your diagnosis?</h2>
+      <h2 style={{ marginBottom: 8 }}>{t('cantFindDiagnosis')}</h2>
       <form onSubmit={handleSubmit} style={{ display: 'flex', gap: 8, flexWrap: 'wrap' }}>
         <input
           type="text"
           value={diagnosis}
           onChange={e => setDiagnosis(e.target.value)}
-          placeholder="Enter your diagnosis"
+          placeholder={t('enterDiagnosis')}
           style={{ flex: 1, minWidth: 200, padding: 8, borderRadius: 8, border: '1px solid #e2e8f0' }}
           required
         />
@@ -47,7 +49,7 @@ export default function CustomDiagnosisGPT() {
           disabled={loading || !diagnosis.trim()}
           style={{ padding: '8px 16px', borderRadius: 8, background: '#667eea', color: 'white', border: 'none', fontWeight: 600 }}
         >
-          {loading ? "Loading..." : "Get Recommendations"}
+          {loading ? "Loading..." : t('getRecommendations')}
         </button>
       </form>
       {error && <div style={{ color: '#c53030', marginTop: 12 }}>{error}</div>}
