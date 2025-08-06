@@ -16,6 +16,17 @@
   "back": "Назад",
   "dailyMenuTitle": "Меню на день",
   "aboutProject": "О проекте",
+  "loading": "Загрузка...",
+  "loading.diagnoses": "Загрузка диагнозов...",
+  "loading.menu": "Загрузка меню...",
+  "error": {
+    "loading": "Ошибка загрузки данных"
+  },
+  "retry": "Повторить",
+  "noDataAvailable": "Данные меню недоступны",
+  "noValidDataAvailable": "Нет валидных данных меню",
+  "noIngredientsAvailable": "Ингредиенты недоступны",
+  "invalidIngredientsData": "Некорректные данные ингредиентов",
   "diagnoses": {
     "gastric_ulcer_exacerbation": "Обострение язвы желудка",
     "gastric_ulcer_recovery": "Восстановление после язвы желудка",

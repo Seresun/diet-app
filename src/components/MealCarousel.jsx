@@ -6,6 +6,53 @@ import { useTranslation } from 'react-i18next';
 
 export default function MealCarousel({ time, label, options }) {
   const { t, i18n } = useTranslation();
+  
+  // Проверяем входные данные
+  if (!time || !label || !options) {
+    console.warn('MealCarousel: Missing required props:', { time, label, options });
+    return (
+      <div className="meal-carousel">
+        <h3>{time || 'Unknown'} — {label || 'Unknown'}</h3>
+        <p style={{ textAlign: 'center', color: '#666' }}>
+          {t('noIngredientsAvailable')}
+        </p>
+      </div>
+    );
+  }
+
+  // Проверяем, что options является массивом
+  if (!Array.isArray(options)) {
+    console.warn('MealCarousel: options is not an array:', options);
+    return (
+      <div className="meal-carousel">
+        <h3>{time} — {label}</h3>
+        <p style={{ textAlign: 'center', color: '#666' }}>
+          {t('invalidIngredientsData')}
+        </p>
+      </div>
+    );
+  }
+
+  // Фильтруем валидные ингредиенты
+  const validOptions = options.filter(option => {
+    if (!option) {
+      console.warn('MealCarousel: Found null/undefined ingredient');
+      return false;
+    }
+    return true;
+  });
+
+  if (validOptions.length === 0) {
+    return (
+      <div className="meal-carousel">
+        <h3>{time} — {label}</h3>
+        <p style={{ textAlign: 'center', color: '#666' }}>
+          {t('noIngredientsAvailable')}
+        </p>
+      </div>
+    );
+  }
+
   const settings = {
     dots: true,
     infinite: false,
@@ -57,8 +104,25 @@ export default function MealCarousel({ time, label, options }) {
     <div className="meal-carousel">
       <h3>{time} — {displayMealName}</h3>
       <Slider {...settings}>
-        {options.map((option, idx) => {
-          const displayIngredient = getProductTranslation(option);
+        {validOptions.map((option, idx) => {
+          // Обрабатываем разные форматы данных от backend
+          let ingredientCode = option;
+          
+          // Если backend возвращает объект с вложенной структурой
+          if (typeof option === 'object' && option !== null) {
+            if (option.food && option.food.code) {
+              ingredientCode = option.food.code;
+            } else if (option.code) {
+              ingredientCode = option.code;
+            } else if (option.name) {
+              ingredientCode = option.name;
+            } else {
+              console.warn('MealCarousel: Unknown ingredient object structure:', option);
+              ingredientCode = 'unknown';
+            }
+          }
+          
+          const displayIngredient = getProductTranslation(ingredientCode);
           return (
             <div key={idx} className="meal-option">
               <p>{t('ingredient')}: {displayIngredient}</p>

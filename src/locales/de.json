@@ -16,6 +16,17 @@
   "back": "Zurück",
   "dailyMenuTitle": "Tagesmenü",
   "aboutProject": "Über das Projekt",
+  "loading": "Laden...",
+  "loading.diagnoses": "Diagnosen werden geladen...",
+  "loading.menu": "Menü wird geladen...",
+  "error": {
+    "loading": "Fehler beim Laden der Daten"
+  },
+  "retry": "Wiederholen",
+  "noDataAvailable": "Keine Menüdaten verfügbar",
+  "noValidDataAvailable": "Keine gültigen Menüdaten verfügbar",
+  "noIngredientsAvailable": "Keine Zutaten verfügbar",
+  "invalidIngredientsData": "Ungültige Zutatendaten",
   "diagnoses": {
     "gastric_ulcer_exacerbation": "Magenulkus-Exazerbation",
     "gastric_ulcer_recovery": "Erholung nach Magenulkus",

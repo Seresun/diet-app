@@ -5,7 +5,7 @@ import TextField from '@mui/material/TextField';
 
 function DietForm({ diagnoses, onSubmit, value = [], onChange }) {
   const { t } = useTranslation();
-  const [selectedDiagnoses, setSelectedDiagnoses] = useState(value);
+  const [selectedDiagnoses, setSelectedDiagnoses] = useState(value || []);
   const [error, setError] = useState('');
 
   // Синхронизация с внешним value
@@ -38,10 +38,11 @@ function DietForm({ diagnoses, onSubmit, value = [], onChange }) {
           <Autocomplete
             multiple
             id="diagnosis-autocomplete"
-            options={diagnoses.map(d => d.id)}
+            options={diagnoses || []}
             value={selectedDiagnoses}
             onChange={handleChange}
-            getOptionLabel={(id) => t(`diagnoses.${id}`)}
+            getOptionLabel={(diagnosis) => diagnosis?.code ? t(`diagnoses.${diagnosis.code}`) : ''}
+            isOptionEqualToValue={(option, value) => option?.code === value?.code}
             renderInput={(params) => (
               <TextField {...params} placeholder={t('selectPlaceholder')} />
             )}

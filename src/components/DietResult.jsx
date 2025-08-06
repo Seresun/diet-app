@@ -9,10 +9,21 @@ import TextFit from './TextFit';
 function DietResult({ data }) {
   const { t } = useTranslation();
 
+  // Add null checks for data
+  if (!data) {
+    return (
+      <div className="diet-result">
+        <p style={{ textAlign: 'center', color: '#666' }}>
+          {t('noDataAvailable')}
+        </p>
+      </div>
+    );
+  }
+
   if (data.tooFewAllowed) {
     return (
       <div className="diet-result">
-        <h2 className="result-title">⚠️ {t('recommendationsFor')} {data.selectedIds.map(id => t(`diagnoses.${id}`)).join(', ')}</h2>
+        <h2 className="result-title">⚠️ {t('recommendationsFor')} {(data.selectedCodes || []).map(code => t(`diagnoses.${code}`)).join(', ')}</h2>
         <div className="error-message">
           {t('tooFewAllowedWarning')}
         </div>
@@ -22,7 +33,7 @@ function DietResult({ data }) {
 
   return (
     <div className="diet-result">
-      <h2 className="result-title">{t('recommendationsFor')} {data.selectedIds.map(id => t(`diagnoses.${id}`)).join(', ')}</h2>
+      <h2 className="result-title">{t('recommendationsFor')} {(data.selectedCodes || []).map(code => t(`diagnoses.${code}`)).join(', ')}</h2>
 
       <h3 className="section-title">{t('allowedFoods')}</h3>
       <Slider
@@ -49,7 +60,7 @@ function DietResult({ data }) {
         ]}
         className="allowed-foods-carousel"
       >
-        {data.allowedFoods.map((item, index) => (
+        {(data.allowedFoods || []).map((item, index) => (
           <div key={index} className="food-carousel-item allowed">
             <TextFit min={8} max={16}>
               {t(`products.${item}`)}
@@ -83,7 +94,7 @@ function DietResult({ data }) {
         ]}
         className="prohibited-foods-carousel"
       >
-        {data.prohibitedFoods.map((item, index) => (
+        {(data.prohibitedFoods || []).map((item, index) => (
           <div key={index} className="food-carousel-item prohibited">
             <TextFit min={8} max={16}>
               {t(`products.${item}`)}
@@ -92,11 +103,11 @@ function DietResult({ data }) {
         ))}
       </Slider>
 
-      {data.dailyPlan && data.dailyPlan.length > 0 && (
+      {data.selectedCodes && data.selectedCodes.length > 0 && (
         <div style={{ marginTop: 24 }}>
           <Link
             to="/daily-menu"
-            state={{ diagnosisId: data.selectedIds[0] }}
+            state={{ diagnosisId: data.selectedIds ? data.selectedIds[0] : data.selectedCodes[0] }}
             className="submit-link"
           >
             {t('dailyMenuButton')}

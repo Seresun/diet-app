@@ -16,6 +16,17 @@
   "back": "Back",
   "dailyMenuTitle": "Daily Menu",
   "aboutProject": "About Project",
+  "loading": "Loading...",
+  "loading.diagnoses": "Loading diagnoses...",
+  "loading.menu": "Loading menu...",
+  "error": {
+    "loading": "Error loading data"
+  },
+  "retry": "Retry",
+  "noDataAvailable": "No menu data available",
+  "noValidDataAvailable": "No valid menu data available",
+  "noIngredientsAvailable": "No ingredients available",
+  "invalidIngredientsData": "Invalid ingredients data",
   "diagnoses": {
     "gastric_ulcer_exacerbation": "Gastric Ulcer Exacerbation",
     "gastric_ulcer_recovery": "Gastric Ulcer Recovery",
