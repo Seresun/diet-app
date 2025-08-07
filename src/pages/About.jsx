@@ -13,29 +13,20 @@ export default function About() {
       </p>
 
       <h2 style={{ fontSize: '1.4rem', marginTop: 24 }}>{t('about.purpose')}</h2>
-      <p>
-        {t('about.purposeDescription')}
-      </p>
+      <p dangerouslySetInnerHTML={{ __html: t('about.purposeDescription') }} />
       <ul>
         <li>{t('about.conditions.gastritis')}</li>
         <li>{t('about.conditions.diabetes')}</li>
         <li>{t('about.conditions.hypertension')}</li>
         <li>{t('about.conditions.ibs')}</li>
       </ul>
-      <p>
-        {t('about.howItWorks')}
-        <br/>
-        {t('about.aiAssistant')}
-      </p>
+      <p dangerouslySetInnerHTML={{ __html: t('about.howItWorks') }} />
+      <p dangerouslySetInnerHTML={{ __html: t('about.aiAssistant') }} />
 
       <h2 style={{ fontSize: '1.4rem', marginTop: 32 }}>{t('about.important')}</h2>
-      <p>
-        {t('about.disclaimer')}
-        <br/>
-        {t('about.basedOn')}
-        <br/>
-        {t('about.updates')}
-      </p>
+      <p dangerouslySetInnerHTML={{ __html: t('about.disclaimer') }} />
+      <p dangerouslySetInnerHTML={{ __html: t('about.basedOn') }} />
+      <p dangerouslySetInnerHTML={{ __html: t('about.updates') }} />
 
       <h2 style={{ fontSize: '1.4rem', marginTop: 32 }}>{t('about.feedback')}</h2>
       <p>
