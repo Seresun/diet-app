@@ -16,6 +16,26 @@
   "back": "Zurück",
   "dailyMenuTitle": "Tagesmenü",
   "aboutProject": "Über das Projekt",
+  "about": {
+    "greeting": "Hallo! Mein Name ist Slava. Ich bin ein Entwickler mit medizinischer Ausbildung und habe diese App erstellt, um das Leben von Menschen mit chronischen Erkrankungen zu erleichtern.",
+    "purpose": "Warum diese App?",
+    "purposeDescription": "Sie hilft bei der Auswahl einer <b>personalisierten Ernährung und Ernährungsregime</b> für Erkrankungen wie:",
+    "conditions": {
+      "gastritis": "Gastritis",
+      "diabetes": "Diabetes", 
+      "hypertension": "Hypertonie",
+      "ibs": "RDS und andere"
+    },
+    "howItWorks": "Sie wählen Ihre Diagnosen aus - und das System erstellt eine Liste von <b>kompatiblen Produkten und Gerichten</b>, wobei Konflikte zwischen Erkrankungen vermieden werden.",
+    "aiAssistant": "Wenn die benötigte Diagnose nicht verfügbar ist - hilft der <b>integrierte KI-Assistent</b> bei der manuellen Erstellung von Empfehlungen.",
+    "important": "Wichtig zu wissen",
+    "disclaimer": "Alle Empfehlungen sind <b>informativ</b> und ersetzen keine ärztliche Beratung.",
+    "basedOn": "Die App basiert auf <b>modernen Ernährungsprinzipien</b>, Daten aus <b>autoritativen medizinischen Publikationen</b> und <b>aktuellen internationalen Richtlinien</b>.",
+    "updates": "Die Liste der Erkrankungen und Empfehlungen wird <b>regelmäßig aktualisiert und angepasst</b>.",
+    "feedback": "Wie kann man eine Diagnose vorschlagen oder Feedback geben?",
+    "feedbackDescription": "Wenn Sie Ihre Diagnose nicht gefunden haben oder Ideen teilen möchten - füllen Sie das Formular über den Link unten aus. Ich lese alle Anfragen!",
+    "feedbackLink": "Feedback geben oder Diagnose vorschlagen"
+  },
   "loading": "Laden...",
   "loading.diagnoses": "Diagnosen werden geladen...",
   "loading.menu": "Menü wird geladen...",

@@ -16,6 +16,26 @@
   "back": "Back",
   "dailyMenuTitle": "Daily Menu",
   "aboutProject": "About Project",
+  "about": {
+    "greeting": "Hello! My name is Slava. I'm a developer with a medical education and I created this app to make life easier for people with chronic conditions.",
+    "purpose": "Why this app?",
+    "purposeDescription": "It helps to select a <b>personalized diet and nutrition regimen</b> for conditions such as:",
+    "conditions": {
+      "gastritis": "gastritis",
+      "diabetes": "diabetes", 
+      "hypertension": "hypertension",
+      "ibs": "IBS and others"
+    },
+    "howItWorks": "You select your diagnoses - and the system forms a list of <b>compatible products and dishes</b>, avoiding conflicts between diseases.",
+    "aiAssistant": "If the needed diagnosis is not available - the <b>built-in AI assistant</b> will help create recommendations manually.",
+    "important": "Important to know",
+    "disclaimer": "All recommendations are <b>informational</b> and do not replace a doctor's consultation.",
+    "basedOn": "The app is based on <b>modern nutrition principles</b>, data from <b>authoritative medical publications</b> and <b>current international guidelines</b>.",
+    "updates": "The list of diseases and recommendations is <b>regularly updated and adjusted</b>.",
+    "feedback": "How to suggest a diagnosis or leave feedback?",
+    "feedbackDescription": "If you didn't find your diagnosis or want to share ideas - fill out the form using the link below. I read all requests!",
+    "feedbackLink": "Leave feedback or suggest a diagnosis"
+  },
   "loading": "Loading...",
   "loading.diagnoses": "Loading diagnoses...",
   "loading.menu": "Loading menu...",
